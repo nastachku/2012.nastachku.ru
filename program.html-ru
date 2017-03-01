@@ -1,0 +1,1344 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<title>Стачка! Конференция</title>
+
+<base href="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="ru" />
+<meta name="description" content="Программирование. Веб-технологии. IT-стартапы. Электронная коммерция. Менеджмент в IT. IT на службе общества." />
+<meta name="keywords" content="Программирование, Веб-технологии, стартапы, электронная коммерция, менеджмент" />
+
+<meta property="og:title" content="Стачка! Конференция" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://nastachku.ru" />
+<meta property="og:image" content="skins/basic/customer/images/logo.gif" />
+<meta property="og:site_name" content="Стачка! Конференция" />
+<meta property="fb:admins" content="1839867817" />
+
+<meta property="vk:image" content="skins/basic/customer/images/logo.gif" />
+
+<meta name="robots" content="noindex" />
+
+<link href="skins/basic/customer/images/icons/favicon.ico" rel="shortcut icon" />
+
+
+<link href="skins/basic/customer/css/ui/jqueryui.css" rel="stylesheet" type="text/css"/>
+<link href="skins/basic/customer/styles.css" rel="stylesheet" type="text/css" />
+<link href="skins/basic/customer/print.css" rel="stylesheet" media="print" type="text/css" />
+<link href="skins/basic/customer/dropdown.css" rel="stylesheet" type="text/css" />
+<!--[if lte IE 7]>
+<link href="/skins/basic/customer/styles_ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+<link href="skins/basic/customer/addons/tags/styles.css" rel="stylesheet" type="text/css" />
+<link href="skins/basic/customer/addons/news_and_emails/styles.css" rel="stylesheet" type="text/css" />
+<link href="skins/basic/customer/addons/polls/styles.css" rel="stylesheet" type="text/css" />
+<link href="skins/basic/customer/addons/hot_deals_block/styles.css" rel="stylesheet" type="text/css" />
+
+
+<link type="text/css" rel="stylesheet" href="http://www.graddit.com/css/graddit.css" />
+<link type="text/css" rel="stylesheet" href="js/jquery.ui.stars/jquery.ui.stars.min.css"/><script type="text/javascript" src="lib/js/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="lib/js/jqueryui/jquery-ui.custom.min.js"></script>
+<script type="text/javascript" src="lib/js/tools/tooltip.min.js"></script>
+<script type="text/javascript" src="lib/js/appear/jquery.appear-1.1.1.js"></script>
+
+<script type="text/javascript" src="js/editors/_empty.editor.js"></script>
+
+<script type="text/javascript" src="js/core.js"></script>
+<script type="text/javascript" src="js/ajax.js"></script>
+<script type="text/javascript" src="js/jquery.ui.stars/jquery.ui.stars.min.js"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+	$(document).ready(function(){
+
+		$('.foruser').children().remove();
+		$('.foruser').append('<p class="vote-tip">Пожалуйста, <a href="http://2012.nastachku.ru/'+&#32;document.location.href&#32;+'#sw_login">авторизируйтесь</a>, чтобы проголосовать.</p>');
+
+	});
+
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+var index_script = 'index.php';
+var current_path = '';
+var changes_warning = 'Y';
+
+var lang = {
+	cannot_buy: 'Вы не можете купить товар с таким набором параметров',
+	no_products_selected: 'Товары не выбраны',
+	error_no_items_selected: 'Нет выбранных записей! Для выполнения этого действия должна быть выбрана хотя бы одна запись.',
+	delete_confirmation: 'Вы уверены, что хотите удалить выбранные записи?',
+	text_out_of_stock: 'Нет в наличии',
+	in_stock: 'В наличии',
+	items: 'штук(-а)',
+	text_required_group_product: 'Пожалуйста, выберите товар для указанной группы [group_name]',
+	notice: 'Оповещение',
+	warning: 'Предупреждение',
+	loading: 'Загрузка...',
+	none: 'Пусто',
+	text_are_you_sure_to_proceed: 'Вы уверены, что хотите продолжить?',
+	text_invalid_url: 'Вы ввели неправильную ссылку',
+	text_cart_changed: 'Содержимое корзины было изменено. Нажмите \"OK\" для того, чтобы сохранить изменения, или \"Cancel\", чтобы оставить содержимое неизменным.',
+	error_validator_email: 'E-Mail адрес в поле <b>[field]<\/b> неправильный.',
+	error_validator_twitter: 'Адрес twitter неправильный. Придерживайтесь формата<br/><span class=\"grey\">http://twitter.com/#!/your_profile<\/span>',
+	error_validator_vkontakte: 'Адрес vk.com неправильный. Придерживайтесь формата<br/><span class=\"grey\">http://vk.com/your_profile<\/span>',
+	error_validator_facebook: 'Адрес facebook неправильный. Придерживайтесь формата<br/><span class=\"grey\">http://www.facebook.com/your_profile http://www.facebook.com/01010101001<\/span>',
+	error_validator_confirm_email: 'E-Mail адреса в поле <b>[field]<\/b> и в поле подтверждения не совпадают.',
+	error_validator_phone: 'Неверный номер телефона в поле <b>[field]<\/b>. Правильный формат: (555) 555-55-55.',
+	error_validator_integer: 'Значение поля <b>[field]<\/b> неправильное. Значение должно быть целым числом.',
+	error_validator_multiple: 'Поле <b>[field]<\/b> не имеет выбранных параметров.',
+	error_validator_password: 'Пароли в полях <b>[field2]<\/b> и <b>[field1]<\/b> не совпадают.',
+	error_validator_required: 'Поле <b>[field]<\/b> обязательное.',
+	error_validator_zipcode: 'Неверный почтовый индекс в поле <b>[field]<\/b>. Правильный формат: [extra].',
+	error_validator_message: 'Значение поля <b>[field]<\/b> - неправильно.',
+	text_page_loading: 'Загрузка... Ваш запрос выполняется, пожалуйста, подождите.',
+	view_cart: 'Корзина',
+	checkout: 'Оформить заказ',
+	product_added_to_cart: 'Товар добавлен в корзину',
+	products_added_to_cart: 'Товары добавлены в Вашу корзину',
+	product_added_to_wl: 'Товар добавлен в Желаемое',
+	product_added_to_cl: 'Товар добавлен в Список сравнения',
+	close: 'Закрыть',
+	error: 'Ошибка',
+	error_ajax: 'Ой, произошла ошибка ([error]). Пожалуйста, попробуйте еще раз.',
+	text_changes_not_saved: 'Сделанные изменения не были сохранены.',
+	text_data_changed: 'Сделанные изменения не были сохранены.\n\nНажмите OK, чтобы продолжить, или Cancel, чтобы остаться на странице.',
+//[GTR]
+	text_vk_error: 'Неправильный формат адреса страницы vk.com.',
+	text_facebook_error: 'Неправильный формат адреса страницы Facebook',
+	text_twitter_error: 'Неправильный формат адреса страницы Twitter'
+//[/GTR]
+}
+
+var currencies = {
+	'primary': {
+		'decimals_separator': '.',
+		'thousands_separator': ',',
+		'decimals': '2',
+		'coefficient': '1.00000'
+	},
+	'secondary': {
+		'decimals_separator': '.',
+		'thousands_separator': ',',
+		'decimals': '2',
+		'coefficient': '1.00000'
+	}
+};
+
+var default_editor = '_empty';
+var default_previewer = 'fancybox';
+
+var cart_language = 'RU';
+var images_dir = '/skins/basic/customer/images';
+var skin_name = 'basic';
+var notice_displaying_time = 13;
+var cart_prices_w_taxes = false;
+var translate_mode = false;
+var regexp = new Array();
+
+
+
+$(document).ready(function(){
+	jQuery.runCart('C');
+});
+
+document.write('<style>.cm-noscript { display:none }</style>'); // hide noscript tags
+//]]>
+</script>
+
+<!--[if lt IE 8]>
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+	$('ul.dropdown li').hover(function(){
+		$(this).addClass('hover');
+		$('> .dir',this).addClass('open');
+		$('ul:first',this).css('display', 'block');
+	},function(){
+		$(this).removeClass('hover');
+		$('.open',this).removeClass('open');
+		$('ul:first',this).css('display', 'none');
+	});
+});
+//]]>
+</script>
+<![endif]-->
+
+
+<script type="text/javascript" src="addons/recurring_billing/js/func.js"></script>
+<script type="text/javascript">
+
+// Extend core function
+fn_register_hooks('recurring_billing', ['check_exceptions']);
+
+</script>
+<script type="text/javascript" src="http://userapi.com/js/api/openapi.js?48"></script>
+
+<script type="text/javascript">
+
+  VK.init({apiId: 2828604, onlyWidgets: true});
+
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+	function fn_follow_user(uid,rid)
+	{
+	if ($('#'+rid).hasClass('checked')){
+
+		fn_follow_user_delete(uid,rid);
+	}else{
+		$.ajax({
+			type: "POST",
+			url: "index.php?dispatch=follow.program",
+			data: "&add_report=1&uid="+uid+"&rid="+rid,
+			success: function(data) {
+				fn_follow_change_report(data.substring(0,data.indexOf('|')));
+			}
+		});
+		$('#report_'+rid).addClass('hidden');
+
+		return false;
+		};
+	}
+	function fn_follow_change_report(id)
+	{
+		$('#r-'+id).addClass('checked');
+		$('.sec-'+id).addClass('is-checked');
+		$('.sec-'+id).removeClass('darker');
+		return false;
+	}
+//]]>
+</script>
+
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+	function fn_follow_user_delete(uid,rid)
+	{
+		$.ajax({
+			type: "POST",
+			url: "index.php?dispatch=follow.program",
+			data: "&delete_report=1&uid="+uid+"&rid="+rid,
+			success: function(data) {
+				var id = data.substring(0,data.indexOf('|'));
+				$('div#r-'+id).empty();
+				$('.sec-'+id).removeClass('is-checked');
+				$('#r-'+id).removeClass('checked');
+			}
+		});
+		return false;
+	}
+//]]>
+</script>
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+
+$(".prog-quote p:last-child").addClass("last");
+var n = $('.prog-quote').length;
+for (var i=0; i < n; i++){
+
+if ($('.prog-quote:eq('+i+')').height() > 185){
+
+$('.prog-quote:eq('+i+')').css('height','185px');
+$('.prog-quote:eq('+i+')').addClass('collapsed');
+$('.prog-quote:eq('+i+')').after('<div class="open">Развернуть</div>');
+
+};
+
+};
+	$('.prog-quote.collapsed + .open').click(function(){
+        var height = $('.prog-quote').height();
+	$(this).prev('.prog-quote.collapsed').css('height','100%');
+        $(this).prev('.prog-quote.collapsed').removeClass('collapsed');
+        $(this).hide();
+	});
+
+var anchor = location.hash.replace('#', '');
+
+
+$('a[name='+anchor+']').siblings('.open').click();
+//$('.prog-quote').parent('div').addClass('doc');
+});
+
+//]]>
+</script>
+</head>
+
+<body class="main program follow">
+<div class="helper-container">
+	<a name="top"></a>
+
+<div id="ajax_loading_box" class="ajax-loading-box"><div class="right-inner-loading-box"><div id="ajax_loading_message" class="ajax-inner-loading-box">Загрузка...</div></div></div>
+
+
+
+
+
+<div id="container" class="container-long">
+		<div id="header">
+<div class="header-helper-container">
+	<div class="logo-image">
+		<a href="index.html"><img id="main-logo" src="http://2012.nastachku.ru/skins/basic/customer/images/logo.gif" width="137" height="70" border="0" alt="ООО &quot;Симбирские технологии&quot;" /></a>
+	</div>
+
+
+	<div class="mission">
+
+		<span class="location-city">
+			Ульяновск
+		</span>
+
+		<span class="date">
+			13-14 АПРЕЛЯ 2012
+		</span>
+
+		<span class="location-place">
+			Дом Пионеров
+		</span>
+
+	</div>
+
+
+<div id="top_menu">
+<ul class="top-menu dropdown"><li class="first-level "><a href="reporters.html">Докладчики</a></li><li class="first-level "><a href="participants.html">Я пойду</a></li><li class="first-level "><a href="sponsors.html">Спонсоры</a></li><li class="first-level "><a href="program.html-ru">Программа</a></li><li class="first-level "><a href="contacts.html">Контакты</a></li><li class="first-level"><a href="community.html-ru">Кто идет(1541)?</a></li></ul></div>
+
+</div>
+</div>
+
+	<div id="content">
+		<div class="content-helper clear">
+
+						<div class="central-column">
+				<div class="central-content">
+
+
+
+<div class="cm-notification-container"></div>
+
+					<div class="mainbox-container">
+		<div class="mainbox-body">		<script type="text/javascript">
+//<![CDATA[
+	function fn_follow_hide_reports()
+	{
+					return false;
+	}
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+	$(document).ready(function(){
+		$('.day ul li:nth-child(2n+2)').css('backgroundColor','#f4f4f4');
+
+		fn_follow_hide_reports();
+	});
+//]]>
+</script>
+
+<div class="accreditation-news clear">
+</div>
+
+<div class="day">
+<ul>
+<li class="title">12 апреля, четверг (День 0)</li>
+	<li class="head">
+		<span class="time">&nbsp;</span>
+		<span class="room-1">Большой зал</span>
+		<span class="room-2">Нижний зал</span>
+		<span class="room-3">Верхний зал</span>
+		<span class="room-4">Малая аудитория №1</span>
+		<span class="room-5">Малая аудитория №2</span>
+	</li>
+	<li class="bord">&nbsp;</li>
+
+	<li>
+		<span class="time">10:00</span>
+		<span class="room-1"></span>
+		<span class="room-2"></span>
+		<span class="room-3"></span>
+		<span class="room-4"></span>
+		<span class="room-5"><a href="day-zero.html">Максим Юрин</a><span onclick="jQuery.redirect('/day-zero.html');" class="report"><span class="tip"></span>«Как сделать рекламную кампанию в социальных медиа и выиграть с ней парочку Каннских Львов»</span></span>
+	</li>
+
+	</ul>
+</div>
+<div class="day">
+<ul>
+<li class="title">13 апреля, пятница</li>
+	<li class="head">
+		<span class="time">&nbsp;</span>
+		<span class="room-1">Большой зал</span>
+		<span class="room-2">Нижний зал</span>
+		<span class="room-3">Верхний зал</span>
+		<span class="room-4">Малая аудитория №1</span>
+		<span class="room-5">Малая аудитория №2</span>
+	</li>
+	<li class="bord">&nbsp;</li>
+
+
+
+
+
+		<li>
+		<span class="time">9:00</span>
+						<span class="room-1">
+																		<span id="0">Регистрация</span>
+												</span>
+									<span class="room-2">
+										</span>
+									<span class="room-3">
+										</span>
+									<span class="room-4">
+										</span>
+									<span class="room-5">
+										</span>
+									</li>
+
+
+
+		<li>
+		<span class="time">10:00</span>
+						<span class="room-1">
+																		<span id="1">Открытие, приветствие</span>
+												</span>
+									<span class="room-2">
+										</span>
+									<span class="room-3">
+										</span>
+									<span class="room-4">
+										</span>
+									<span class="room-5">
+										</span>
+									</li>
+
+
+
+		<li>
+		<span class="time">11:00</span>
+						<span class="room-1">
+
+						<span class="sec-2"><a href='reporters.html#roman_pavlushko'>Роман Павлушко</a><br />AVITO.ru,&nbsp;
+						<span id="r-2" class="report"><span class="tip"></span>&quot;Нагруженный поиск на Sphinx&quot;</span>
+						<br/>
+												</span>
+
+
+						<span class="sec-3"><a href='reporters.html#ilia_kosmo'>Илья Космодемьянский</a>,&nbsp;
+						<span id="r-3" class="report"><span class="tip"></span>Теория и практики распределенных баз данных</span>
+						<br/>
+												</span>
+
+																								</span>
+									<span class="room-2">
+
+						<span class="sec-21"><a href='contacts.html'>SMM</a>,&nbsp;
+						<span id="r-21" class="report"><span class="tip"></span></span>
+						<br/>
+												</span>
+
+
+						<span class="sec-210"><a href='reporters.html#alex_ponomar'>Алексей Пономарь</a><br />"Буферная Бухта", директор,&nbsp;
+						<span id="r-210" class="report"><span class="tip"></span>&quot;Будущее &quot;социального&quot; веба.&quot;</span>
+						<br/>
+												</span>
+
+
+						<span class="sec-211"><a href='reporters.html#maks_yurin'>Максим Юрин</a><br />SMM директор "RED KEDS",&nbsp;
+						<span id="r-211" class="report"><span class="tip"></span>&quot;Все умрут, а SMM останется&quot;</span>
+						<br/>
+												</span>
+
+
+						<span class="sec-212"><a href='reporters.html#maks_gilcov'>Максим Жильцов</a><br />digital-стратег Pichesky,&nbsp;
+						<span id="r-212" class="report"><span class="tip"></span>&quot;Долгосрочная коммуникационная стратегия. Думайте без Paid media.&quot;</span>
+						<br/>
+												</span>
+
+																								</span>
+									<span class="room-3">
+
+						<span class="sec-4"><a href='contacts.html'>Стартапы</a>,&nbsp;
+						<span id="r-4" class="report"><span class="tip"></span></span>
+						<br/>
+												</span>
+
+
+						<span class="sec-53"><a href='reporters.html#tasya_kydashkina'>Таисия Кудашкина</a><br />CEO проекта tulp.ru,&nbsp;
+						<span id="r-53" class="report"><span class="tip"></span>&quot;Старт-ап в твоих руках: как работают крутые боссы?&quot;</span>
+						<br/>
+												</span>
+
+
+						<span class="sec-52"><a href='reporters.html#sergej_bylaev'>Сергей Булаев</a><br />основатель компании "Скрипт",&nbsp;
+						<span id="r-52" class="report"><span class="tip"></span>&quot;Простота хуже воровства&quot;</span>
+						<br/>
+												</span>
+
+
+						<span class="sec-51"><a href='reporters.html#ryslan_fazliev'>Руслан Фазлыев</a><br />"Креативная разработка",&nbsp;
+						<span id="r-51" class="report"><span class="tip"></span>&quot;Венчурные деньги. Инструкция по эксплуатации.&quot;</span>
+						<br/>
+												</span>
+
+																								</span>
+									<span class="room-4">
+
+						<span class="sec-22"><a href='contacts.html'>Интернет для бизнеса</a>,&nbsp;
+						<span id="r-22" class="report"><span class="tip"></span></span>
+						<br/>
+												</span>
+
+
+						<span class="sec-222"><a href='reporters.html#evgenij_chernov'>Евгений Чернов</a><br />директор по развитию MST digital agency,&nbsp;
+						<span id="r-222" class="report"><span class="tip"></span>&quot;Тренды SMM&quot;</span>
+						<br/>
+												</span>
+
+
+						<span class="sec-223"><a href='reporters.html#vilkov_karcev'>Андрей Вилков<br />Сергей Карцев</a><br />ЭР-Телеком,&nbsp;
+						<span id="r-223" class="report"><span class="tip"></span>&quot;Комплексные интернет-решения для вашего бизнеса&quot;</span>
+						<br/>
+												</span>
+
+
+						<span class="sec-224"><a href='reporters.html#pavel_ivanov'>Павел Иванов</a><br />директор "Центра Интернет Рекламы Ульяновска",&nbsp;
+						<span id="r-224" class="report"><span class="tip"></span>&quot;Реклама в Интернете. Эффективные интернет-площадки Ульяновска&quot;</span>
+						<br/>
+												</span>
+
+																								</span>
+									<span class="room-5">
+
+						<span class="sec-23"><a href='contacts.html'>Формируется</a>,&nbsp;
+						<span id="r-23" class="report"><span class="tip"></span></span>
+						<br/>
+												</span>
+
+																								</span>
+									</li>
+
+
+				<li class="dinner">
+		<span class="time">13:00</span>
+			<span class="center">ОБЕД</span>
+		</li>
+			</li>
+
+
+
+		<li>
+		<span class="time">14:00</span>
+						<span class="room-1">
+
+						<span class="sec-5"><a href='reporters.html#maksim_lapshin'>Максим Лапшин</a><br />erlyvideo,&nbsp;
+						<span id="r-5" class="report"><span class="tip"></span>Использование эрланг в видеостриминговом сервере.</span>
+						<br/>
+												</span>
+
+
+						<span class="sec-6"><a href='reporters.html#alex_titov'>Александр Титов</a><br />Skype,&nbsp;
+						<span id="r-6" class="report"><span class="tip"></span>Инженерный дзен. Непрерывные изменения.</span>
+						<br/>
+												</span>
+
+																								</span>
+									<span class="room-2">
+
+						<span class="sec-7"><a href='contacts.html'>Design</a>,&nbsp;
+						<span id="r-7" class="report"><span class="tip"></span></span>
+						<br/>
+												</span>
+
+
+						<span class="sec-74"><a href='reporters.html#vasili_lebedev'>Василий Лебедев</a><br />Креативный директор "RedKeds",&nbsp;
+						<span id="r-74" class="report"><span class="tip"></span>&quot;Креативные процессы&quot;</span>
+						<br/>
+												</span>
+
+
+						<span class="sec-75"><a href='reporters.html#nikita_obuhov'>Никита Обухов</a><br />Руководитель студии FunkyPunky.ru,&nbsp;
+						<span id="r-75" class="report"><span class="tip"></span>веб-дизайн 80го уровня</span>
+						<br/>
+												</span>
+
+
+						<span class="sec-76"><a href='reporters.html#anna_belozerova'>Белозерова Анна</a><br />руководитель отдела дизайна Simtech,&nbsp;
+						<span id="r-76" class="report"><span class="tip"></span>&quot;Дизайн-менеджмент. Подходы к формированию команд&quot;</span>
+						<br/>
+												</span>
+
+																								</span>
+									<span class="room-3">
+
+						<span class="sec-251"><a href='contacts.html'>E-commerce</a>,&nbsp;
+						<span id="r-251" class="report"><span class="tip"></span></span>
+						<br/>
+												</span>
+
+
+						<span class="sec-25"><a href='reporters.html#kate_shykalova'>Екатерина Шукалова</a><br />генеральный директор "Ферт",&nbsp;
+						<span id="r-25" class="report"><span class="tip"></span>&quot;Идеальный функционал интернет-магазина. Взгляд владельца и разработчика&quot;</span>
+						<br/>
+												</span>
+
+
+						<span class="sec-26"><a href='reporters.html#sergej_egorushkin'>Сергей Егорушкин</a><br />руководитель e-commerce проектов,&nbsp;
+						<span id="r-26" class="report"><span class="tip"></span>&quot;Маркетинг лояльности&quot;.</span>
+						<br/>
+												</span>
+
+
+						<span class="sec-27"><a href='reporters.html#aleksandr_belolikov'>Александр Белоликов</a><br />учредитель агентства интернет-маркетинга DIOGENES,&nbsp;
+						<span id="r-27" class="report"><span class="tip"></span>&quot;Интернет-магазин: путь длиною в год от создания до выхода на самоокупаемость&quot;</span>
+						<br/>
+												</span>
+
+
+						<span class="sec-28"><a href='reporters.html#oksans_bogomaz'>Дмитрий Васильев</a><br />генеральный директор NetCat,&nbsp;
+						<span id="r-28" class="report"><span class="tip"></span>Минимагазин: экономика и технологии</span>
+						<br/>
+												</span>
+
+																								</span>
+									<span class="room-4">
+
+						<span class="sec-251"><a href='reporters.html#ivan_nikitin'>Иван Никитин</a><br />консультант,&nbsp;
+						<span id="r-251" class="report"><span class="tip"></span>Мастер-класс &quot;Веб-аналитика или как оценить эффективность работы сайта&quot;</span>
+						<br/>
+												</span>
+
+																								</span>
+									<span class="room-5">
+
+						<span class="sec-261"><a href='contacts.html'>Формируется</a>,&nbsp;
+						<span id="r-261" class="report"><span class="tip"></span></span>
+						<br/>
+												</span>
+
+																								</span>
+									</li>
+
+
+
+		<li>
+		<span class="time">16:00</span>
+						<span class="room-1">
+
+						<span class="sec-8"><a href='reporters.html#alexey_palazhchenko'>Алексей Пaлажченко</a><br />Microsoft,&nbsp;
+						<span id="r-8" class="report"><span class="tip"></span>NoSQL под нагрузкой: практика.</span>
+						<br/>
+												</span>
+
+
+						<span class="sec-81"><a href='reporters.html#anya_stepanyan'>Аня Степанян</a><br />undev.ru,&nbsp;
+						<span id="r-81" class="report"><span class="tip"></span>Из чего делались вебвыборы</span>
+						<br/>
+												</span>
+
+																								</span>
+									<span class="room-2">
+
+						<span class="sec-10"><a href='contacts.html'>PM</a>,&nbsp;
+						<span id="r-10" class="report"><span class="tip"></span>Формируется</span>
+						<br/>
+												</span>
+
+
+						<span class="sec-109"><a href='reporters.html#vasili_lebedev'>Василий Лебедев</a><br />креативный директор "RedKeds",&nbsp;
+						<span id="r-109" class="report"><span class="tip"></span>&quot;Брачные игры креатива и технологий&quot;</span>
+						<br/>
+												</span>
+
+
+						<span class="sec-110"><a href='reporters.html#ivanov_chernov'>Александр Иванов<br />Евгений Чернов</a><br />MST Digital Agency,&nbsp;
+						<span id="r-110" class="report"><span class="tip"></span>&quot;Продажник против Проектника, или как сделать все проданное вовремя&quot;</span>
+						<br/>
+												</span>
+
+
+						<span class="sec-111"><a href='reporters.html#igor_zilberg'>Игорь Зильберг</a><br />генеральный директор "SMARTHEAD",&nbsp;
+						<span id="r-111" class="report"><span class="tip"></span>&quot;Паттерны поведения проектных команд&quot;</span>
+						<br/>
+												</span>
+
+
+						<span class="sec-112"><a href='reporters.html#dmitri_vasilev'>Дмитрий Васильев</a><br />генеральный директор NetCat,&nbsp;
+						<span id="r-112" class="report"><span class="tip"></span>Расчет бюджета веб-студии и стоимости сайта</span>
+						<br/>
+												</span>
+
+																								</span>
+									<span class="room-3">
+
+						<span class="sec-272"><a href='contacts.html'>ИТ и общество. Перспективы и модели развития ИТ в Ульяновске</a>,&nbsp;
+						<span id="r-272" class="report"><span class="tip"></span>формируется</span>
+						<br/>
+												</span>
+
+
+						<span class="sec-271"><a href='reporters.html#lev_valkin'>Лев Валкин</a><br />aboutecho.com,&nbsp;
+						<span id="r-271" class="report"><span class="tip"></span>Ульяновск как яйцо Силиконовой долины. Инкубация.</span>
+						<br/>
+												</span>
+
+
+						<span class="sec-273"><a href='reporters.html#oleg_vlasenko'>Олег Власенко</a><br />"СимбирСофт",&nbsp;
+						<span id="r-273" class="report"><span class="tip"></span>&quot;Карьера ИТ специалиста в провинции, как компонент развития ИТ в регионе. Практика построения.&quot;</span>
+						<br/>
+												</span>
+
+
+						<span class="sec-274"><a href='contacts.html'>Круглый стол. Перспективы и модели развития ИТ в Ульяновске.</a>,&nbsp;
+						<span id="r-274" class="report"><span class="tip"></span>формируется</span>
+						<br/>
+												</span>
+
+																								</span>
+									<span class="room-4">
+
+						<span class="sec-28"><a href='contacts.html'>Спец. Секция</a>,&nbsp;
+						<span id="r-28" class="report"><span class="tip"></span>&quot;Клиенты для клиентов&quot; - ведущий - Кожевников А.</span>
+						<br/>
+												</span>
+
+																								</span>
+									<span class="room-5">
+
+						<span class="sec-29"><a href='contacts.html'>Формируется</a>,&nbsp;
+						<span id="r-29" class="report"><span class="tip"></span></span>
+						<br/>
+												</span>
+
+																								</span>
+									</li>
+
+
+
+		<li>
+		<span class="time">18:00</span>
+						<span class="room-1">
+										</span>
+									<span class="room-2">
+										</span>
+									<span class="room-3">
+										</span>
+									<span class="room-4">
+										</span>
+									<span class="room-5">
+										</span>
+									</li>
+
+
+				<li class="dinner">
+		<span class="time">20:00<br /><br />23:00</span>
+			<span class="center">СТАЧКА ПАТИ</span>
+		</li>
+			</li>
+
+			</ul>
+		</div>
+		<div class="day">
+		<ul>
+		<li class="title">14 апреля, суббота</li>
+
+		<li class="head">
+		<span class="time">&nbsp;</span>
+		<span class="room-1">Большой зал</span>
+		<span class="room-2">Нижний зал</span>
+		<span class="room-3">Верхний зал</span>
+		<span class="room-4">Малая аудитория №1</span>
+		<span class="room-5">Малая аудитория №2</span>
+		</li>
+		<li class="bord">&nbsp;</li>
+
+
+
+
+		<li>
+		<span class="time">10:00</span>
+						<span class="room-1">
+
+						<span class="sec-11"><a href='reporters.html#konst_tihonov'>Константин Тихонов</a><br />Skype,&nbsp;
+						<span id="r-11" class="report"><span class="tip"></span>Интернационализация и локализация веб-проектов на примере Qik.</span>
+						<br/>
+												</span>
+
+																								</span>
+									<span class="room-2">
+
+						<span class="sec-12"><a href='contacts.html'>Тестирование</a>,&nbsp;
+						<span id="r-12" class="report"><span class="tip"></span></span>
+						<br/>
+												</span>
+
+
+						<span class="sec-125"><a href='reporters.html#anna_shvedova'>Шведова Анна</a>,&nbsp;
+						<span id="r-125" class="report"><span class="tip"></span>Тестирование проекта. Жизнь до и после</span>
+						<br/>
+												</span>
+
+
+						<span class="sec-126"><a href='reporters.html#anna_komarova'>Комарова Анна</a>,&nbsp;
+						<span id="r-126" class="report"><span class="tip"></span>QA API</span>
+						<br/>
+												</span>
+
+
+						<span class="sec-127"><a href='reporters.html#leonid_dinershtein'>Динерштейн Леонид</a>,&nbsp;
+						<span id="r-127" class="report"><span class="tip"></span>Agile with cucumber or BDD with fun или Гибкость с огурцом.</span>
+						<br/>
+												</span>
+
+																								</span>
+									<span class="room-3">
+
+						<span class="sec-301"><a href='reporters.html#sergej_lomakov'>Сергей Ломаков</a><br />Simtech,&nbsp;
+						<span id="r-301" class="report"><span class="tip"></span>&quot;Использование key-value хранилища Redis в боевых условиях&quot;</span>
+						<br/>
+												</span>
+
+
+						<span class="sec-303"><a href='reporters.html#urij_bushmelev'>Бушмелев Юрий</a><br />"Облако в подсобке",&nbsp;
+						<span id="r-303" class="report"><span class="tip"></span>Строим правильную локальную инфраструктуру.</span>
+						<br/>
+												</span>
+
+
+						<span class="sec-304"><a href='reporters.html#vasilij_soshnikov'>Сошников Василий</a>,&nbsp;
+						<span id="r-304" class="report"><span class="tip"></span>Кроссплатформенная разработка: Windows, Linux, MacOS, iOS, Android</span>
+						<br/>
+												</span>
+
+																								</span>
+									<span class="room-4">
+
+						<span class="sec-31"><a href='reporters.html#alex_vesnin'>Алексей Веснин</a><br />Netherworld Developers Team, Trinitech LLC,&nbsp;
+						<span id="r-31" class="report"><span class="tip"></span>Создание Искусственного Интеллекта в 3-х мерной среде</span>
+						<br/>
+												</span>
+
+																								</span>
+									<span class="room-5">
+
+						<span class="sec-32"><a href='contacts.html'>Формируется</a>,&nbsp;
+						<span id="r-32" class="report"><span class="tip"></span></span>
+						<br/>
+												</span>
+
+																								</span>
+									</li>
+
+
+
+		<li>
+		<span class="time">11:30</span>
+						<span class="room-1">
+
+						<span class="sec-13"><a href='reporters.html#michail_tabunov'>Михаил Табунов</a><br />gt, undev.ru,&nbsp;
+						<span id="r-13" class="report"><span class="tip"></span>&quot;Архитектура клиентских приложений на примере Backbone.js и Knockout.js&quot;</span>
+						<br/>
+												</span>
+
+
+						<span class="sec-14"><a href='reporters.html#konst_osipov'>Константин Осипов</a><br />Mail.ru,&nbsp;
+						<span id="r-14" class="report"><span class="tip"></span>&quot;Tarantool/Box 1.5: опыт оптимизации производительности NoSQL СУБД.&quot;</span>
+						<br/>
+												</span>
+
+																								</span>
+									<span class="room-2">
+
+						<span class="sec-33"><a href='contacts.html'>SEO</a>,&nbsp;
+						<span id="r-33" class="report"><span class="tip"></span></span>
+						<br/>
+												</span>
+
+
+						<span class="sec-331"><a href='reporters.html#vasili_tkachev'>Василий Ткачёв</a><br />All In Top,&nbsp;
+						<span id="r-331" class="report"><span class="tip"></span>&quot;Социализация SEO&quot;</span>
+						<br/>
+												</span>
+
+
+						<span class="sec-332"><a href='reporters.html#ivan_nikitin'>Иван Никитин</a><br />консультант,&nbsp;
+						<span id="r-332" class="report"><span class="tip"></span>&quot;Смерть SEO или SEO 2.0?&quot;</span>
+						<br/>
+												</span>
+
+																								</span>
+									<span class="room-3">
+
+						<span class="sec-341"><a href='contacts.html'>Менеджмент ИТ</a>,&nbsp;
+						<span id="r-341" class="report"><span class="tip"></span></span>
+						<br/>
+												</span>
+
+
+						<span class="sec-342"><a href='reporters.html#oleg_vlasenko'>Баринов Кирилл</a>,&nbsp;
+						<span id="r-342" class="report"><span class="tip"></span>ИТ: как вырастить команду</span>
+						<br/>
+												</span>
+
+
+						<span class="sec-343"><a href='reporters.html#evgenij_kaznacheev'>Евгений Казначеев</a><br />CDEV,&nbsp;
+						<span id="r-343" class="report"><span class="tip"></span>Случился пиз$%^ец: что делать, чтобы тебя не перестали любить. Про даунтаймы, кризисы и как на них реагировать</span>
+						<br/>
+												</span>
+
+
+						<span class="sec-344"><a href='reporters.html#sergej_yurkin'>Юркин Сергей</a>,&nbsp;
+						<span id="r-344" class="report"><span class="tip"></span>Управление растущей ИТ организацией: от группы программистов до средней компании.</span>
+						<br/>
+												</span>
+
+																								</span>
+									<span class="room-4">
+
+						<span class="sec-35"><a href='reporters.html#oleg_paderin'>Падерин Олег</a><br />ITECH.group,&nbsp;
+						<span id="r-35" class="report"><span class="tip"></span>Социальные сети: оценка эффективности инвестиций</span>
+						<br/>
+												</span>
+
+
+						<span class="sec-351"><a href='reporters.html#alex_ponomar'>Алексей Пономарь</a><br />"Буферная Бухта",&nbsp;
+						<span id="r-351" class="report"><span class="tip"></span>&quot;Краткий курс молодого SMM-щика.&quot;</span>
+						<br/>
+												</span>
+
+																								</span>
+									<span class="room-5">
+
+						<span class="sec-36"><a href='contacts.html'>Формируется</a>,&nbsp;
+						<span id="r-36" class="report"><span class="tip"></span></span>
+						<br/>
+												</span>
+
+																								</span>
+									</li>
+
+
+				<li class="dinner">
+		<span class="time">13:00</span>
+			<span class="center">ОБЕД</span>
+		</li>
+			</li>
+
+
+
+		<li>
+		<span class="time">14:00</span>
+						<span class="room-1">
+
+						<span class="sec-16"><a href='reporters.html#alex_ribak'>Алексей Рыбак</a><br />Badoo,&nbsp;
+						<span id="r-16" class="report"><span class="tip"></span>Архитектура badoo</span>
+						<br/>
+												</span>
+
+
+						<span class="sec-161"><a href='reporters.html#gleb_pomikalov'>Глеб Помыкалов</a><br />Microsoft,&nbsp;
+						<span id="r-161" class="report"><span class="tip"></span>Scrum: от теории к практике</span>
+						<br/>
+												</span>
+
+																								</span>
+									<span class="room-2">
+
+						<span class="sec-18"><a href='contacts.html'>Формируется</a>,&nbsp;
+						<span id="r-18" class="report"><span class="tip"></span></span>
+						<br/>
+												</span>
+
+
+						<span class="sec-181"><a href='reporters.html#dmitri_kozlov'>Дмитрий Козлов</a><br />генеральный директор "DEFA Ineractiv",&nbsp;
+						<span id="r-181" class="report"><span class="tip"></span>Digital branding – теория и практика малых дел</span>
+						<br/>
+												</span>
+
+
+						<span class="sec-182"><a href='reporters.html#andrej_yablonskih'>Андрей Яблонских</a><br />account-директор Social Network,&nbsp;
+						<span id="r-182" class="report"><span class="tip"></span>&quot;Управление репутацие и  ее эффективность&quot;</span>
+						<br/>
+												</span>
+
+																								</span>
+									<span class="room-3">
+
+						<span class="sec-190"><a href='reporters.html#oleg_chehovskij'>Олег Чеховский</a><br />Magento,&nbsp;
+						<span id="r-190" class="report"><span class="tip"></span>Magento 2. X.Commerce. Будущее электронной коммерции на Западе.</span>
+						<br/>
+												</span>
+
+
+						<span class="sec-191"><a href='reporters.html#roman_milovaniv'>Милованов Роман</a>,&nbsp;
+						<span id="r-191" class="report"><span class="tip"></span>Как заработать на разработке приложений для мобильных устройств</span>
+						<br/>
+												</span>
+
+
+						<span class="sec-192"><a href='reporters.html#dmitrij_stepanov'>Степанов Дмитрий</a>,&nbsp;
+						<span id="r-192" class="report"><span class="tip"></span>Shareware по-русски. Как создавать и продавать тиражное ПО и стать miniISV</span>
+						<br/>
+												</span>
+
+																								</span>
+									<span class="room-4">
+
+						<span class="sec-381"><a href='reporters.html#alex_titov'>Александр Титов</a>,&nbsp;
+						<span id="r-381" class="report"><span class="tip"></span>chef run (флипчарт сессия)</span>
+						<br/>
+												</span>
+
+																								</span>
+									<span class="room-5">
+
+						<span class="sec-38"><a href='contacts.html'>Формируется</a>,&nbsp;
+						<span id="r-38" class="report"><span class="tip"></span></span>
+						<br/>
+												</span>
+
+																								</span>
+									</li>
+
+
+
+		<li>
+		<span class="time">16:00</span>
+						<span class="room-1">
+
+						<span class="sec-172"><a href='reporters.html#alex_mahotkin'>Алексей Махоткин</a><br />undev.ru,&nbsp;
+						<span id="r-172" class="report"><span class="tip"></span>Мульти-блиц</span>
+						<br/>
+												</span>
+
+
+						<span class="sec-171"><a href='reporters.html#lev_valkin'>Лев Валкин</a><br />aboutecho.com,&nbsp;
+						<span id="r-171" class="report"><span class="tip"></span>Инь и ян масштабирования</span>
+						<br/>
+												</span>
+
+																								</span>
+									<span class="room-2">
+
+						<span class="sec-20"><a href='contacts.html'>Маркетинг/Аналитика</a>,&nbsp;
+						<span id="r-20" class="report"><span class="tip"></span></span>
+						<br/>
+												</span>
+
+
+						<span class="sec-202"><a href='reporters.html#kate_shykalova'>Екатерина Шукалова</a><br />генеральный директор "Ферт",&nbsp;
+						<span id="r-202" class="report"><span class="tip"></span>&quot;Предпроектное проектирование глазами заказчика&quot;</span>
+						<br/>
+												</span>
+
+
+						<span class="sec-203"><a href='reporters.html#kate_shykalova'>Екатерина Шукалова</a><br />генеральный директор "Ферт",&nbsp;
+						<span id="r-203" class="report"><span class="tip"></span>&quot;Коммуникации заказчик-разработчик. Как повысить эффективность?&quot;</span>
+						<br/>
+												</span>
+
+
+						<span class="sec-204"><a href='reporters.html#gennadij_kozar'>Геннадий Козарь</a><br />менеджер по PR "DIOGENES",&nbsp;
+						<span id="r-204" class="report"><span class="tip"></span>&quot;Роль позиционирования в повышении конверсии трафика&quot;</span>
+						<br/>
+												</span>
+
+																								</span>
+									<span class="room-3">
+
+						<span class="sec-39"><a href='contacts.html'>ИТ и общество. Проекты.</a>,&nbsp;
+						<span id="r-39" class="report"><span class="tip"></span>формируется</span>
+						<br/>
+												</span>
+
+
+						<span class="sec-391"><a href='reporters.html#adrian_krupchatskij'>Адриан Крупчанский</a><br />Нотамедиа,&nbsp;
+						<span id="r-391" class="report"><span class="tip"></span>&quot;Работа с государством. Полезные советы для заказчиков и подрядчиков.&quot;</span>
+						<br/>
+												</span>
+
+
+						<span class="sec-392"><a href='reporters.html#vislov'>Вислов Д.</a>,&nbsp;
+						<span id="r-392" class="report"><span class="tip"></span>&quot;Следи за дорогой&quot;</span>
+						<br/>
+												</span>
+
+
+						<span class="sec-393"><a href='reporters.html#pavel_kolashnikov'>Павел Калашников</a>,&nbsp;
+						<span id="r-393" class="report"><span class="tip"></span>О молодежных инициативах по развитию ИТ в Ульяновске</span>
+						<br/>
+												</span>
+
+																								</span>
+									<span class="room-4">
+
+						<span class="sec-401"><a href='reporters.html#zaharov_vadim'>Захаров Вадим</a>,&nbsp;
+						<span id="r-401" class="report"><span class="tip"></span>Продвижение интернет магазина с минимальными затратами</span>
+						<br/>
+												</span>
+
+
+						<span class="sec-402"><a href='reporters.html#egorushkin_sergej'>Сергей Егорушкин</a>,&nbsp;
+						<span id="r-402" class="report"><span class="tip"></span>&quot;Подходы к продвижению интернет-магазинов&quot;</span>
+						<br/>
+												</span>
+
+																								</span>
+									<span class="room-5">
+
+						<span class="sec-40"><a href='contacts.html'>Формируется</a>,&nbsp;
+						<span id="r-40" class="report"><span class="tip"></span></span>
+						<br/>
+												</span>
+
+																								</span>
+									</li>
+
+
+				<li class="dinner">
+		<span class="time">17:30<br /><br />18:00</span>
+			<span class="center">ЗАКРЫТИЕ СТАЧКИ</span>
+		</li>
+			</li>
+		</ul>
+</div>
+</div>
+</div>
+				</div>
+			</div>
+
+
+
+
+		</div>
+	</div>
+
+
+</div>
+
+
+<div class="border-long orange clear-both"></div>
+<div class="container-long">
+						<div class="bottom clear-both">
+				<div class="block-group clear"><div class="el-1" style="float: left; width:64%"><div class="sidebox-wrapper ">
+	<h3 class="sidebox-title">Организаторы</h3>
+	<div class="sidebox-body">		<div class="spon center">
+		<a href="http://it.ulgov.ru/" >		<img class=" "  id="det_img_983249183" src="images/promo/0/ulgov.gif" width="73" height="62" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://itmcompany.ru/" >		<img class=" "  id="det_img_848747522" src="images/promo/0/itm.jpg" width="130" height="56" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.simtech.ru/" >		<img class=" "  id="det_img_1201969018" src="images/promo/0/simtech.gif" width="129" height="58" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.kaize.ru/" >		<img class=" "  id="det_img_502515336" src="images/promo/0/kajdzen.gif" width="130" height="58" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://m-st.ru/" >		<img class=" "  id="det_img_678784216" src="images/promo/0/mst.gif" width="108" height="58" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.interra-group.ru/" >		<img class=" "  id="det_img_115193994" src="images/promo/0/interra.gif" width="87" height="75" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://itc73.ru/" >		<img class=" "  id="det_img_579083824" src="images/promo/0/itc.gif" width="154" height="75" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://platidoma.ru/" >		<img class=" "  id="det_img_1367967487" src="images/promo/0/platidoma.gif" width="144" height="71" alt=""  border="0" />		</a>	</div>
+	</div>
+	<!-- <div class="sidebox-bottom"><span>&nbsp;</span></div> -->
+</div></div><div class="el-2" style="float: left; width:32%"><div class="sidebox-wrapper ">
+	<h3 class="sidebox-title">Генеральный спонсор</h3>
+	<div class="sidebox-body">		<div class="spon center">
+		<a href="http://www.skype.com" >		<img class=" "  id="det_img_1456676247" src="images/promo/0/skype.png" width="88" height="40" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://new.undev.ru/" target="_blank">		<img class=" "  id="det_img_1208154777" src="images/promo/0/Undev.jpg" width="160" height="39" alt=""  border="0" />		</a>	</div>
+	</div>
+	<!-- <div class="sidebox-bottom"><span>&nbsp;</span></div> -->
+</div></div><div class="el-3 clear-both"><div class="sidebox-wrapper ">
+	<h3 class="sidebox-title">Спонсоры</h3>
+	<div class="sidebox-body"><div class="wysiwyg-content">
+<div class="spon-bann clear">
+	<a href="http://badoo.com/" target="_blank"><img alt="" border="0" src="images/promo/0/badoo-off.jpg" /></a> <a href="http://aboutecho.com/" target="_blank"><img alt="" border="0" src="images/promo/0/echo-off.jpg" /></a><a href="http://simbirsoft.com/" target="_blank"><img alt="" border="0" src="images/promo/0/simbirsoft-off.jpg" /></a><a href="http://www.netcat.ru/" target="_blank"><img alt="" border="0" src="images/promo/0/netcat-off.jpg" /></a><a href="http://www.mosaica.ru/" target="_blank"><img alt="" border="0" src="images/promo/0/mosaika-off.jpg" /></a><a href="http://www.itech-group.ru/" target="_blank"><img alt="" border="0" src="images/promo/0/itech-off.jpg" /></a><a href="http://www.rt.ru/" target="_blank"><img alt="" border="0" src="images/promo/0/rostelekom-off.jpg" /></a></div>
+<div class="legend clear clear-both">
+	<span class="off-sponsor">&mdash; официальный спонсор </span> <span class="gold-sponsor"> &mdash; золотой спонсор </span> <span class="plat-sponsor"> &mdash; платиновый спонсор </span></div>
+
+</div></div>
+	<!-- <div class="sidebox-bottom"><span>&nbsp;</span></div> -->
+</div></div><div class="el-4 clear-both"><div class="sidebox-wrapper ">
+	<h3 class="sidebox-title">Интернет партнеры</h3>
+	<div class="sidebox-body">		<div class="spon center">
+		<a href="http://www.evo73.ru/" target="_blank">		<img class=" "  id="det_img_2007277261" src="images/promo/0/evo.jpg" width="170" height="62" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.dlink.ru/" target="_blank">		<img class=" "  id="det_img_247904818" src="images/promo/0/dlink.jpg" width="160" height="48" alt=""  border="0" />		</a>	</div>
+	</div>
+	<!-- <div class="sidebox-bottom"><span>&nbsp;</span></div> -->
+</div></div><div class="el-5 clear-both"><div class="block-group clear"><div class="el-1" style="float: left; width:64%"><div class="sidebox-wrapper ">
+	<h3 class="sidebox-title">Информационные партнеры</h3>
+	<div class="sidebox-body">		<div class="spon center">
+		<a href="http://ertelecom.ru/" target="_blank">		<img class=" "  id="det_img_284603478" src="images/promo/0/ertelecom.jpg" width="180" height="30" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.epson.ru/" target="_blank">		<img class=" "  id="det_img_95495741" src="images/promo/0/Epson.jpg" width="150" height="50" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.simm.ru/" target="_blank">		<img class=" "  id="det_img_39720439" src="images/promo/0/Logo_С�%259C_.jpg" width="160" height="34" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://cossa.ru/" target="_blank">		<img class=" "  id="det_img_1554343291" src="images/promo/0/cossa.jpg" width="160" height="49" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.ulmic.ru/" target="_blank">		<img class=" "  id="det_img_573244729" src="images/promo/0/�%259C�%2598Ц.jpg" width="160" height="55" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.superjob.ru" >		<img class=" "  id="det_img_993569644" src="images/promo/0/super_job.jpg" width="159" height="68" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.dailycomm.ru/" >		<img class=" "  id="det_img_1807374781" src="images/promo/0/DC.jpg" width="176" height="48" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://cloudzone.ru/" >		<img class=" "  id="det_img_1292554629" src="images/promo/0/cloudzone.jpg" width="174" height="46" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://rocid.ru/" >		<img class=" "  id="det_img_1365253404" src="images/promo/0/rocid.jpg" width="131" height="68" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.cmsmagazine.ru/" >		<img class=" "  id="det_img_1048089096" src="images/promo/0/cms-mag.jpg" width="161" height="41" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.cs-cart.com/" target="_blank">		<img class=" "  id="det_img_404213951" src="images/promo/0/cs-cart.gif" width="175" height="37" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.softline.ru/" target="_blank">		<img class=" "  id="det_img_2114070505" src="images/promo/0/softline-small.jpg" width="135" height="28" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://ul-people.ru/" target="_blank">		<img class=" "  id="det_img_1961387593" src="images/promo/0/ul-people.jpg" width="160" height="36" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.uln.mts.ru/" target="_blank">		<img class=" "  id="det_img_321627790" src="images/promo/0/logo_mts_small.jpg" width="70" height="35" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://in-numbers.ru/" >		<img class=" "  id="det_img_242210167" src="images/promo/0/int-num.jpg" width="140" height="46" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.umi-cms.ru/" target="_blank">		<img class=" "  id="det_img_1272178044" src="images/promo/0/umi.jpg" width="122" height="40" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.ultop.ru/" target="_blank">		<img class=" "  id="det_img_1411898333" src="images/promo/0/ultop-logo_new.jpg" width="91" height="60" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.weblancer.net/" target="_blank">		<img class=" "  id="det_img_1138275758" src="images/promo/0/weblancer.jpg" width="118" height="33" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://samag.ru/" >		<img class=" "  id="det_img_1964723985" src="images/promo/0/sisad.jpg" width="169" height="79" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://kryukov.biz" target="_blank">		<img class=" "  id="det_img_247663868" src="images/promo/0/kryukov.jpg" width="122" height="40" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://mannix.ru/" target="_blank">		<img class=" "  id="det_img_1987023280" src="images/promo/0/logo-mannix-s-n-2.jpg" width="170" height="29" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.advantshop.net/" target="_blank">		<img class=" "  id="det_img_1019209355" src="images/promo/0/advantshop.jpg" width="122" height="40" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.reg.ru/" >		<img class=" "  id="det_img_750179204" src="images/promo/0/regru_new.png" width="183" height="55" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://vk.com/ulgss" target="_blank">		<img class=" "  id="det_img_518323848" src="images/promo/0/e_8621aab3.jpg" width="50" height="50" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://it-world.ru/" target="_blank">		<img class=" "  id="det_img_1134403349" src="images/promo/0/itworld-s.jpg" width="160" height="34" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://retro-gamer.ru/" target="_blank">		<img class=" "  id="det_img_1329263029" src="images/promo/0/retro_game_2.jpg" width="130" height="26" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.allintop.ru/" target="_blank">		<img class=" "  id="det_img_1886291336" src="images/promo/0/AllInTop.png" width="125" height="50" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.ul.aif.ru/" target="_blank">		<img class=" "  id="det_img_443595948" src="images/promo/0/aif.jpg" width="180" height="30" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://uldelo.ru/" target="_blank">		<img class=" "  id="det_img_389934158" src="images/promo/0/do.jpg" width="160" height="33" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://ul.kp.ru/" target="_blank">		<img class=" "  id="det_img_1746084949" src="images/promo/0/kp.jpg" width="160" height="34" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.mosaica.ru/" target="_blank">		<img class=" "  id="det_img_691500766" src="images/promo/0/mosaika.jpg" width="160" height="30" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://vk.com/zybr73" target="_blank">		<img class=" "  id="det_img_674537636" src="images/promo/0/zubr.jpg" width="93" height="60" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://ogni-goroda.com/" target="_blank">		<img class=" "  id="det_img_1841580690" src="images/promo/0/CL5.jpg" width="150" height="50" alt=""  border="0" />		</a>	</div>
+	</div>
+	<!-- <div class="sidebox-bottom"><span>&nbsp;</span></div> -->
+</div></div><div class="el-2" style="float: left; width:32%"><div class="sidebox-wrapper ">
+	<h3 class="sidebox-title">Партнеры</h3>
+	<div class="sidebox-body">		<div class="spon center">
+		<a href="http://www.i-association.ru/" >		<img class=" "  id="det_img_731221206" src="images/promo/0/aia.png" width="130" height="40" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.starkoff.ru/" >		<img class=" "  id="det_img_81397280" src="images/promo/0/starkoff.gif" width="39" height="40" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://mymediacompany.ru/" >		<img class=" "  id="det_img_267341772" src="images/promo/0/my_media.gif" width="130" height="23" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.raec.ru" >		<img class=" "  id="det_img_1724790850" src="images/promo/0/raek.jpg" width="140" height="51" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.internet-association.ru/" target="_blank">		<img class=" "  id="det_img_1888772061" src="images/promo/0/air_logo.jpg" width="144" height="60" alt=""  border="0" />		</a>	</div>
+	</div>
+	<!-- <div class="sidebox-bottom"><span>&nbsp;</span></div> -->
+</div></div><div class="el-3" style="float: left; width:32%"><div class="sidebox-wrapper ">
+	<h3 class="sidebox-title">HR-партнеры</h3>
+	<div class="sidebox-body">		<div class="spon center">
+		<a href="http://www.itmozg.ru/" target="_blank">		<img class=" "  id="det_img_1559896401" src="images/promo/0/itmozg.jpg" width="89" height="65" alt=""  border="0" />		</a>	</div>
+	</div>
+	<!-- <div class="sidebox-bottom"><span>&nbsp;</span></div> -->
+</div></div></div></div></div>
+			</div>
+
+	<div id="footer">
+		<div class="footer-helper-container">
+			<div class="footer-top-helper"><span class="float-left">&nbsp;</span><span class="float-right">&nbsp;</span></div>
+
+<p class="bottom-copyright class">&copy; 2012-2015 &laquo;Стачка&raquo;. &nbsp;Любое использование материала приветствуется при гиперссылке.
+</p>
+
+<div class="metrics">
+
+
+
+<script type="text/javascript">
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-38587983-1', 'nastachku.ru');
+  ga('require', 'displayfeatures');
+  ga('require', 'linkid', 'linkid.js');
+  /* Openstat parser v3 minimized */
+  var campaign={_params:{},_parsed:!1,_decode64:function(a){if('function'==typeof window.atob)return atob(a);var r,t,n,i,e,s,o,p,d='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=',h=0,c=0,f='',m=[];if(!a)return a;a+='';do i=d.indexOf(a.charAt(h++)),e=d.indexOf(a.charAt(h++)),s=d.indexOf(a.charAt(h++)),o=d.indexOf(a.charAt(h++)),p=i<<18|e<<12|s<<6|o,r=p>>16&255,t=p>>8&255,n=255&p,m[c++]=64==s?String.fromCharCode(r):64==o?String.fromCharCode(r,t):String.fromCharCode(r,t,n);while(h<a.length);return f=m.join('')},_parse:function(){var a=window.location.search.substr(1),r=a.split('&');this._params={};for(var t=0;t<r.length;t++){var n=r[t].split('=');this._params[n[0]]=n[1]}this._parsed=!0},hasMarker:function(){return window.location.search.indexOf('utm_')>0?!1:(this._parsed||this._parse(),'undefined'!=typeof this._params._openstat?!0:!1)},buildCampaignParams:function(){if(!this.hasMarker())return!1;var a=this._decode64(this._params._openstat),r=a.split(';');return{campaignName:r[1],campaignSource:r[0],campaignMedium:'cpc',campaignContent:r[2]+' ('+r[3]+')'}}};
+  var hit=campaign.hasMarker()?campaign.buildCampaignParams():{};
+  hit.page=location.pathname+location.search+location.hash;
+  ga('send', 'pageview', hit);
+  /* Accurate bounce rate by time */
+  document.referrer&&0==document.referrer.split('/')[2].indexOf(location.hostname)||setTimeout(function(){ga('send','event','Сеансы','Сеансы без отказов',location.pathname)},15000);
+
+</script>
+
+</div>
+
+
+
+
+			<div class="footer-bottom-helper"><span class="float-left">&nbsp;</span><span class="float-right">&nbsp;</span></div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+var proto = (document.location.protocol=='https:')?'https:':'http:';
+var host = proto+'//widget.copiny.com';
+document.write(unescape("%3Cscript src='" + host + "/static/js/widget.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" charset="utf-8">
+        var copinyWidgetOptions = {
+	position: 'left',
+        hostcommunity:'http://stachka.copiny.com',
+        newwindow: '0',
+        type: 'idea',
+	color: 	  '#ff8400',
+        border:   '#ffffff',
+	round:    '1',
+	title:	  "\u041e\u0431\u0440\u0430\u0442\u043d\u0430\u044f \u0441\u0432\u044f\u0437\u044c",
+        cache:   "9ca936d041c7637244c3fb8ef4a8ea6c\/9ca936d041c7637244c3fb8ef4a8ea6c\/ejOwVXUxULV0BZFOhqouhqoWBmC2AZhtBGa7IIm4aYMpQ7CQEUQIzDYHs50B",
+        community:4196
+};
+initCopinyWidget(copinyWidgetOptions);
+CopinyWidget.showTab();
+</script>
+
+			</div>
+
+
+</body>
+
+</html>

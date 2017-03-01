@@ -1,0 +1,615 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<title>Докладчики :: IT на службе общества - Стачка! Конференция 2012 (Архив)</title>
+
+<base href="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="ru" />
+<meta name="description" content="Веб-технологии Веб-дизайн юзабилити интернет-маркетинг Программирование Мобильные облачные технологии тренды языки программирования новые подходы решении задач IT-стартапы Истории успеха брать деньги начинать Электронная коммерция Тренды России западе развитие платформ электронной коммерции Менеджмент Организация IT-компании кадры куда пойти работать службе общества Развитие Ульяновске государство польза Взаимодействие власти ИТ-сообщества различных регионах России совместная реализация ИТ-проектов Развитие регионального ИТ-собщества решение социальных задач рамках работы" />
+<meta name="keywords" content="Программирование, Веб-технологии, стартапы, электронная коммерция, менеджмент" />
+
+<meta property="og:title" content="Стачка! Конференция" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://nastachku.ru" />
+<meta property="og:image" content="skins/basic/customer/images/logo.gif" />
+<meta property="og:site_name" content="Стачка! Конференция" />
+<meta property="fb:admins" content="1839867817" />
+
+<meta property="vk:image" content="skins/basic/customer/images/logo.gif" />
+
+
+<link href="skins/basic/customer/images/icons/favicon.ico" rel="shortcut icon" />
+
+
+<link href="skins/basic/customer/css/ui/jqueryui.css" rel="stylesheet" type="text/css"/>
+<link href="skins/basic/customer/styles.css" rel="stylesheet" type="text/css" />
+<link href="skins/basic/customer/print.css" rel="stylesheet" media="print" type="text/css" />
+<link href="skins/basic/customer/dropdown.css" rel="stylesheet" type="text/css" />
+<!--[if lte IE 7]>
+<link href="/skins/basic/customer/styles_ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+<link href="skins/basic/customer/addons/tags/styles.css" rel="stylesheet" type="text/css" />
+<link href="skins/basic/customer/addons/news_and_emails/styles.css" rel="stylesheet" type="text/css" />
+<link href="skins/basic/customer/addons/polls/styles.css" rel="stylesheet" type="text/css" />
+<link href="skins/basic/customer/addons/hot_deals_block/styles.css" rel="stylesheet" type="text/css" />
+
+
+<link type="text/css" rel="stylesheet" href="http://www.graddit.com/css/graddit.css" />
+<link type="text/css" rel="stylesheet" href="js/jquery.ui.stars/jquery.ui.stars.min.css"/><script type="text/javascript" src="lib/js/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="lib/js/jqueryui/jquery-ui.custom.min.js"></script>
+<script type="text/javascript" src="lib/js/tools/tooltip.min.js"></script>
+<script type="text/javascript" src="lib/js/appear/jquery.appear-1.1.1.js"></script>
+
+<script type="text/javascript" src="js/editors/_empty.editor.js"></script>
+
+<script type="text/javascript" src="js/core.js"></script>
+<script type="text/javascript" src="js/ajax.js"></script>
+<script type="text/javascript" src="js/jquery.ui.stars/jquery.ui.stars.min.js"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+var index_script = 'index.php';
+var current_path = '';
+var changes_warning = 'Y';
+
+var lang = {
+	cannot_buy: 'Вы не можете купить товар с таким набором параметров',
+	no_products_selected: 'Товары не выбраны',
+	error_no_items_selected: 'Нет выбранных записей! Для выполнения этого действия должна быть выбрана хотя бы одна запись.',
+	delete_confirmation: 'Вы уверены, что хотите удалить выбранные записи?',
+	text_out_of_stock: 'Нет в наличии',
+	in_stock: 'В наличии',
+	items: 'штук(-а)',
+	text_required_group_product: 'Пожалуйста, выберите товар для указанной группы [group_name]',
+	notice: 'Оповещение',
+	warning: 'Предупреждение',
+	loading: 'Загрузка...',
+	none: 'Пусто',
+	text_are_you_sure_to_proceed: 'Вы уверены, что хотите продолжить?',
+	text_invalid_url: 'Вы ввели неправильную ссылку',
+	text_cart_changed: 'Содержимое корзины было изменено. Нажмите \"OK\" для того, чтобы сохранить изменения, или \"Cancel\", чтобы оставить содержимое неизменным.',
+	error_validator_email: 'E-Mail адрес в поле <b>[field]<\/b> неправильный.',
+	error_validator_twitter: 'Адрес twitter неправильный. Придерживайтесь формата<br/><span class=\"grey\">http://twitter.com/#!/your_profile<\/span>',
+	error_validator_vkontakte: 'Адрес vk.com неправильный. Придерживайтесь формата<br/><span class=\"grey\">http://vk.com/your_profile<\/span>',
+	error_validator_facebook: 'Адрес facebook неправильный. Придерживайтесь формата<br/><span class=\"grey\">http://www.facebook.com/your_profile http://www.facebook.com/01010101001<\/span>',
+	error_validator_confirm_email: 'E-Mail адреса в поле <b>[field]<\/b> и в поле подтверждения не совпадают.',
+	error_validator_phone: 'Неверный номер телефона в поле <b>[field]<\/b>. Правильный формат: (555) 555-55-55.',
+	error_validator_integer: 'Значение поля <b>[field]<\/b> неправильное. Значение должно быть целым числом.',
+	error_validator_multiple: 'Поле <b>[field]<\/b> не имеет выбранных параметров.',
+	error_validator_password: 'Пароли в полях <b>[field2]<\/b> и <b>[field1]<\/b> не совпадают.',
+	error_validator_required: 'Поле <b>[field]<\/b> обязательное.',
+	error_validator_zipcode: 'Неверный почтовый индекс в поле <b>[field]<\/b>. Правильный формат: [extra].',
+	error_validator_message: 'Значение поля <b>[field]<\/b> - неправильно.',
+	text_page_loading: 'Загрузка... Ваш запрос выполняется, пожалуйста, подождите.',
+	view_cart: 'Корзина',
+	checkout: 'Оформить заказ',
+	product_added_to_cart: 'Товар добавлен в корзину',
+	products_added_to_cart: 'Товары добавлены в Вашу корзину',
+	product_added_to_wl: 'Товар добавлен в Желаемое',
+	product_added_to_cl: 'Товар добавлен в Список сравнения',
+	close: 'Закрыть',
+	error: 'Ошибка',
+	error_ajax: 'Ой, произошла ошибка ([error]). Пожалуйста, попробуйте еще раз.',
+	text_changes_not_saved: 'Сделанные изменения не были сохранены.',
+	text_data_changed: 'Сделанные изменения не были сохранены.\n\nНажмите OK, чтобы продолжить, или Cancel, чтобы остаться на странице.',
+//[GTR]
+	text_vk_error: 'Неправильный формат адреса страницы vk.com.',
+	text_facebook_error: 'Неправильный формат адреса страницы Facebook',
+	text_twitter_error: 'Неправильный формат адреса страницы Twitter'
+//[/GTR]
+}
+
+var currencies = {
+	'primary': {
+		'decimals_separator': '.',
+		'thousands_separator': ',',
+		'decimals': '2',
+		'coefficient': '1.00000'
+	},
+	'secondary': {
+		'decimals_separator': '.',
+		'thousands_separator': ',',
+		'decimals': '2',
+		'coefficient': '1.00000'
+	}
+};
+
+var default_editor = '_empty';
+var default_previewer = 'fancybox';
+
+var cart_language = 'RU';
+var images_dir = '/skins/basic/customer/images';
+var skin_name = 'basic';
+var notice_displaying_time = 13;
+var cart_prices_w_taxes = false;
+var translate_mode = false;
+var regexp = new Array();
+
+
+
+$(document).ready(function(){
+	jQuery.runCart('C');
+});
+
+document.write('<style>.cm-noscript { display:none }</style>'); // hide noscript tags
+//]]>
+</script>
+
+<!--[if lt IE 8]>
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+	$('ul.dropdown li').hover(function(){
+		$(this).addClass('hover');
+		$('> .dir',this).addClass('open');
+		$('ul:first',this).css('display', 'block');
+	},function(){
+		$(this).removeClass('hover');
+		$('.open',this).removeClass('open');
+		$('ul:first',this).css('display', 'none');
+	});
+});
+//]]>
+</script>
+<![endif]-->
+
+
+<script type="text/javascript" src="addons/recurring_billing/js/func.js"></script>
+<script type="text/javascript">
+
+// Extend core function
+fn_register_hooks('recurring_billing', ['check_exceptions']);
+
+</script>
+<script type="text/javascript" src="http://userapi.com/js/api/openapi.js?48"></script>
+
+<script type="text/javascript">
+
+  VK.init({apiId: 2828604, onlyWidgets: true});
+
+</script>
+
+
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+
+$(".prog-quote p:last-child").addClass("last");
+var n = $('.prog-quote').length;
+for (var i=0; i < n; i++){
+
+if ($('.prog-quote:eq('+i+')').height() > 185){
+
+$('.prog-quote:eq('+i+')').css('height','185px');
+$('.prog-quote:eq('+i+')').addClass('collapsed');
+$('.prog-quote:eq('+i+')').after('<div class="open">Развернуть</div>');
+
+};
+
+};
+	$('.prog-quote.collapsed + .open').click(function(){
+        var height = $('.prog-quote').height();
+	$(this).prev('.prog-quote.collapsed').css('height','100%');
+        $(this).prev('.prog-quote.collapsed').removeClass('collapsed');
+        $(this).hide();
+	});
+
+var anchor = location.hash.replace('#', '');
+
+
+$('a[name='+anchor+']').siblings('.open').click();
+//$('.prog-quote').parent('div').addClass('doc');
+});
+
+//]]>
+</script>
+</head>
+
+<body class="main view pages">
+<div class="helper-container">
+	<a name="top"></a>
+
+<div id="ajax_loading_box" class="ajax-loading-box"><div class="right-inner-loading-box"><div id="ajax_loading_message" class="ajax-inner-loading-box">Загрузка...</div></div></div>
+
+
+
+
+
+<div id="container" class="container-long">
+		<div id="header">
+<div class="header-helper-container">
+	<div class="logo-image">
+		<a href="index.html"><img id="main-logo" src="http://2012.nastachku.ru/skins/basic/customer/images/logo.gif" width="137" height="70" border="0" alt="ООО &quot;Симбирские технологии&quot;" /></a>
+	</div>
+
+
+	<div class="mission">
+
+		<span class="location-city">
+			Ульяновск
+		</span>
+
+		<span class="date">
+			13-14 АПРЕЛЯ 2012
+		</span>
+
+		<span class="location-place">
+			Дом Пионеров
+		</span>
+
+	</div>
+
+
+<div id="top_menu">
+<ul class="top-menu dropdown"><li class="first-level "><a href="reporters.html">Докладчики</a></li><li class="first-level "><a href="participants.html">Я пойду</a></li><li class="first-level "><a href="sponsors.html">Спонсоры</a></li><li class="first-level "><a href="program.html">Программа</a></li><li class="first-level "><a href="contacts.html">Контакты</a></li><li class="first-level"><a href="community.html">Кто идет(1541)?</a></li></ul></div>
+
+</div>
+</div>
+
+	<div id="content">
+		<div class="content-helper clear">
+
+						<div class="central-column">
+				<div class="central-content">
+
+
+
+<div class="cm-notification-container"></div>
+
+					<div class="mainbox-container">
+		<h1 class="mainbox-title">IT на службе общества</h1>
+		<div class="mainbox-body">
+<div class="wysiwyg-content clear">
+		<div class="doc-menu clear">
+	<div class="left-side">
+		<a class="theme-section c1" href="web-tech.html"> <span class="title">Веб-технологии</span> <span>Веб-дизайн, юзабилити, интернет-маркетинг, SEO</span> </a> <a class="theme-section c2" href="programmers.html"> <span class="title">Программирование</span> <span>Мобильные, облачные технологии, тренды,<br />
+		языки программирования, новые подходы в<br />
+		решении задач</span>&nbsp;</a><a class="theme-section c3" href="it-startup.html"><span class="title">IT-стартапы</span> <span>Истории успеха, где брать деньги, как начинать</span> </a></div>
+	<div class="right-side">
+		<a class="theme-section c4" href="e-commerce.html"> <span class="title">Электронная коммерция</span> <span>Тренды в России, на западе, развитие платформ для электронной коммерции</span> </a> <a class="theme-section c5" href="it-management.html"> <span class="title">Менеджмент в IT</span> <span>Организация IT-компании, кадры для IT, куда пойти работать</span>&nbsp;</a><a class="theme-section c6 active" href="it-serve-society.html"><span class="title">IT на службе общества</span> <span>Развитие IT в Ульяновске, государство и IT, польза от IT</span> </a></div>
+</div>
+<div class="section-block">
+	<p>
+		Взаимодействие власти и ИТ-сообщества в различных регионах России, совместная реализация ИТ-проектов. Развитие регионального ИТ-собщества, решение социальных задач. В рамках работы секции состоится тематический круглый стол с последующим сбором мнений и предложений от участников конференции. Презентация региональных ИТ-проектов от Министерства информационных технологий Ульяновской области. Программа секции формируется. Вы можете предложить свой доклад на рассмотрение в Оргкомитет.</p>
+</div>
+
+
+	</div>
+
+</div>
+</div>
+				</div>
+			</div>
+
+
+
+
+		</div>
+	</div>
+
+
+</div>
+
+
+<div class="border-long orange clear-both"></div>
+<div class="container-long">
+						<div class="bottom clear-both">
+				<div class="block-group clear"><div class="el-1" style="float: left; width:64%"><div class="sidebox-wrapper ">
+	<h3 class="sidebox-title">Организаторы</h3>
+	<div class="sidebox-body">		<div class="spon center">
+		<a href="http://it.ulgov.ru/" >		<img class=" "  id="det_img_2054880258" src="images/promo/0/ulgov.gif" width="73" height="62" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://itmcompany.ru/" >		<img class=" "  id="det_img_1163363165" src="images/promo/0/itm.jpg" width="130" height="56" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.simtech.ru/" >		<img class=" "  id="det_img_1002804561" src="images/promo/0/simtech.gif" width="129" height="58" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.kaize.ru/" >		<img class=" "  id="det_img_444150588" src="images/promo/0/kajdzen.gif" width="130" height="58" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://m-st.ru/" >		<img class=" "  id="det_img_717241337" src="images/promo/0/mst.gif" width="108" height="58" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.interra-group.ru/" >		<img class=" "  id="det_img_1169174173" src="images/promo/0/interra.gif" width="87" height="75" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://itc73.ru/" >		<img class=" "  id="det_img_703160285" src="images/promo/0/itc.gif" width="154" height="75" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://platidoma.ru/" >		<img class=" "  id="det_img_1963418012" src="images/promo/0/platidoma.gif" width="144" height="71" alt=""  border="0" />		</a>	</div>
+	</div>
+	<!-- <div class="sidebox-bottom"><span>&nbsp;</span></div> -->
+</div></div><div class="el-2" style="float: left; width:32%"><div class="sidebox-wrapper ">
+	<h3 class="sidebox-title">Генеральный спонсор</h3>
+	<div class="sidebox-body">		<div class="spon center">
+		<a href="http://www.skype.com" >		<img class=" "  id="det_img_380979618" src="images/promo/0/skype.png" width="88" height="40" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://new.undev.ru/" target="_blank">		<img class=" "  id="det_img_542220675" src="images/promo/0/Undev.jpg" width="160" height="39" alt=""  border="0" />		</a>	</div>
+	</div>
+	<!-- <div class="sidebox-bottom"><span>&nbsp;</span></div> -->
+</div></div><div class="el-3 clear-both"><div class="sidebox-wrapper ">
+	<h3 class="sidebox-title">Спонсоры</h3>
+	<div class="sidebox-body"><div class="wysiwyg-content">
+<div class="spon-bann clear">
+	<a href="http://badoo.com/" target="_blank"><img alt="" border="0" src="images/promo/0/badoo-off.jpg" /></a> <a href="http://aboutecho.com/" target="_blank"><img alt="" border="0" src="images/promo/0/echo-off.jpg" /></a><a href="http://simbirsoft.com/" target="_blank"><img alt="" border="0" src="images/promo/0/simbirsoft-off.jpg" /></a><a href="http://www.netcat.ru/" target="_blank"><img alt="" border="0" src="images/promo/0/netcat-off.jpg" /></a><a href="http://www.mosaica.ru/" target="_blank"><img alt="" border="0" src="images/promo/0/mosaika-off.jpg" /></a><a href="http://www.itech-group.ru/" target="_blank"><img alt="" border="0" src="images/promo/0/itech-off.jpg" /></a><a href="http://www.rt.ru/" target="_blank"><img alt="" border="0" src="images/promo/0/rostelekom-off.jpg" /></a></div>
+<div class="legend clear clear-both">
+	<span class="off-sponsor">&mdash; официальный спонсор </span> <span class="gold-sponsor"> &mdash; золотой спонсор </span> <span class="plat-sponsor"> &mdash; платиновый спонсор </span></div>
+
+</div></div>
+	<!-- <div class="sidebox-bottom"><span>&nbsp;</span></div> -->
+</div></div><div class="el-4 clear-both"><div class="sidebox-wrapper ">
+	<h3 class="sidebox-title">Интернет партнеры</h3>
+	<div class="sidebox-body">		<div class="spon center">
+		<a href="http://www.evo73.ru/" target="_blank">		<img class=" "  id="det_img_2096298382" src="images/promo/0/evo.jpg" width="170" height="62" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.dlink.ru/" target="_blank">		<img class=" "  id="det_img_849699102" src="images/promo/0/dlink.jpg" width="160" height="48" alt=""  border="0" />		</a>	</div>
+	</div>
+	<!-- <div class="sidebox-bottom"><span>&nbsp;</span></div> -->
+</div></div><div class="el-5 clear-both"><div class="block-group clear"><div class="el-1" style="float: left; width:64%"><div class="sidebox-wrapper ">
+	<h3 class="sidebox-title">Информационные партнеры</h3>
+	<div class="sidebox-body">		<div class="spon center">
+		<a href="http://ertelecom.ru/" target="_blank">		<img class=" "  id="det_img_694253685" src="images/promo/0/ertelecom.jpg" width="180" height="30" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.epson.ru/" target="_blank">		<img class=" "  id="det_img_1029817142" src="images/promo/0/Epson.jpg" width="150" height="50" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.simm.ru/" target="_blank">		<img class=" "  id="det_img_598039806" src="images/promo/0/simm.jpg" width="160" height="34" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://cossa.ru/" target="_blank">		<img class=" "  id="det_img_1093736688" src="images/promo/0/cossa.jpg" width="160" height="49" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.ulmic.ru/" target="_blank">		<img class=" "  id="det_img_1340364357" src="images/promo/0/mic.jpg" width="160" height="55" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.superjob.ru" >		<img class=" "  id="det_img_683815662" src="images/promo/0/super_job.jpg" width="159" height="68" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.dailycomm.ru/" >		<img class=" "  id="det_img_914107243" src="images/promo/0/DC.jpg" width="176" height="48" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://cloudzone.ru/" >		<img class=" "  id="det_img_2123179962" src="images/promo/0/cloudzone.jpg" width="174" height="46" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://rocid.ru/" >		<img class=" "  id="det_img_57696319" src="images/promo/0/rocid.jpg" width="131" height="68" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.cmsmagazine.ru/" >		<img class=" "  id="det_img_756405624" src="images/promo/0/cms-mag.jpg" width="161" height="41" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.cs-cart.com/" target="_blank">		<img class=" "  id="det_img_1660399992" src="images/promo/0/cs-cart.gif" width="175" height="37" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.softline.ru/" target="_blank">		<img class=" "  id="det_img_1239828925" src="images/promo/0/softline-small.jpg" width="135" height="28" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://ul-people.ru/" target="_blank">		<img class=" "  id="det_img_1087520235" src="images/promo/0/ul-people.jpg" width="160" height="36" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.uln.mts.ru/" target="_blank">		<img class=" "  id="det_img_1596035917" src="images/promo/0/logo_mts_small.jpg" width="70" height="35" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://in-numbers.ru/" >		<img class=" "  id="det_img_665401386" src="images/promo/0/int-num.jpg" width="140" height="46" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.umi-cms.ru/" target="_blank">		<img class=" "  id="det_img_201020877" src="images/promo/0/umi.jpg" width="122" height="40" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.ultop.ru/" target="_blank">		<img class=" "  id="det_img_177522458" src="images/promo/0/ultop-logo_new.jpg" width="91" height="60" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.weblancer.net/" target="_blank">		<img class=" "  id="det_img_1662723135" src="images/promo/0/weblancer.jpg" width="118" height="33" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://samag.ru/" >		<img class=" "  id="det_img_641572886" src="images/promo/0/sisad.jpg" width="169" height="79" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://kryukov.biz" target="_blank">		<img class=" "  id="det_img_84919068" src="images/promo/0/kryukov.jpg" width="122" height="40" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://mannix.ru/" target="_blank">		<img class=" "  id="det_img_678602652" src="images/promo/0/logo-mannix-s-n-2.jpg" width="170" height="29" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.advantshop.net/" target="_blank">		<img class=" "  id="det_img_1644377447" src="images/promo/0/advantshop.jpg" width="122" height="40" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.reg.ru/" >		<img class=" "  id="det_img_529069656" src="images/promo/0/regru_new.png" width="183" height="55" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://vk.com/ulgss" target="_blank">		<img class=" "  id="det_img_1395843989" src="images/promo/0/e_8621aab3.jpg" width="50" height="50" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://it-world.ru/" target="_blank">		<img class=" "  id="det_img_666067972" src="images/promo/0/itworld-s.jpg" width="160" height="34" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+			<img class=" "  id="det_img_1232229942" src="images/promo/0/retro_game_2.jpg" width="130" height="26" alt=""  border="0" />			</div>
+			<div class="spon center">
+		<a href="http://www.allintop.ru/" target="_blank">		<img class=" "  id="det_img_1211778353" src="images/promo/0/AllInTop.png" width="125" height="50" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.ul.aif.ru/" target="_blank">		<img class=" "  id="det_img_1047047590" src="images/promo/0/aif.jpg" width="180" height="30" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://uldelo.ru/" target="_blank">		<img class=" "  id="det_img_1774450617" src="images/promo/0/do.jpg" width="160" height="33" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://ul.kp.ru/" target="_blank">		<img class=" "  id="det_img_1160593087" src="images/promo/0/kp.jpg" width="160" height="34" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.mosaica.ru/" target="_blank">		<img class=" "  id="det_img_1896746693" src="images/promo/0/mosaika.jpg" width="160" height="30" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+				<img class=" "  id="det_img_321220654" src="images/promo/0/zubr.jpg" width="93" height="60" alt=""  border="0" />		</div>
+			<div class="spon center">
+		<a href="http://ogni-goroda.com/" target="_blank">		<img class=" "  id="det_img_42926582" src="images/promo/0/CL5.jpg" width="150" height="50" alt=""  border="0" />		</a>	</div>
+	</div>
+	<!-- <div class="sidebox-bottom"><span>&nbsp;</span></div> -->
+</div></div><div class="el-2" style="float: left; width:32%"><div class="sidebox-wrapper ">
+	<h3 class="sidebox-title">Партнеры</h3>
+	<div class="sidebox-body">		<div class="spon center">
+		<a href="http://www.i-association.ru/" >		<img class=" "  id="det_img_347302851" src="images/promo/0/aia.png" width="130" height="40" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.starkoff.ru/" >		<img class=" "  id="det_img_1414957342" src="images/promo/0/starkoff.gif" width="39" height="40" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://mymediacompany.ru/" >		<img class=" "  id="det_img_1383290939" src="images/promo/0/my_media.gif" width="130" height="23" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.raec.ru" >		<img class=" "  id="det_img_1031118513" src="images/promo/0/raek.jpg" width="140" height="51" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.internet-association.ru/" target="_blank">		<img class=" "  id="det_img_181580937" src="images/promo/0/air_logo.jpg" width="144" height="60" alt=""  border="0" />		</a>	</div>
+	</div>
+	<!-- <div class="sidebox-bottom"><span>&nbsp;</span></div> -->
+</div></div><div class="el-3" style="float: left; width:32%"><div class="sidebox-wrapper ">
+	<h3 class="sidebox-title">HR-партнеры</h3>
+	<div class="sidebox-body">		<div class="spon center">
+		<a href="http://www.itmozg.ru/" target="_blank">		<img class=" "  id="det_img_1358987253" src="images/promo/0/itmozg.jpg" width="89" height="65" alt=""  border="0" />		</a>	</div>
+	</div>
+	<!-- <div class="sidebox-bottom"><span>&nbsp;</span></div> -->
+</div></div></div></div></div>
+			</div>
+
+		<div id="footer">
+		<div class="footer-helper-container">
+			<div class="footer-top-helper"><span class="float-left">&nbsp;</span><span class="float-right">&nbsp;</span></div>
+
+
+
+<table class="socials fixed-layout">
+<tr>
+<td class="vk">
+<div id="vk_like"></div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+VK.Widgets.Like("vk_like", {type: "mini"});
+//]]>
+</script>
+
+</td>
+
+<td class="fb">
+<div id="fb-root"></div>
+
+<script type="text/javascript">
+//<![CDATA[
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ru_RU/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+//]]>
+</script>
+
+<div class="fb-like" data-href="http://nastachku.ru" data-send="false" data-layout="button_count" data-width="120" data-show-faces="true"></div>
+</td>
+
+
+
+<td class="google">
+<!-- Поместите этот тег туда, где должна отображаться кнопка +1. -->
+<g:plusone size="medium"></g:plusone>
+
+<!-- Поместите этот вызов функции отображения в соответствующее место. -->
+
+<script type="text/javascript">
+//<![CDATA[
+  window.___gcfg = {lang: 'ru'};
+
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+//]]>
+</script>
+
+</td>
+
+<td class="twitter">
+
+<a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">tweet</a>
+<script type="text/javascript">
+//<![CDATA[
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+//]]>
+</script>
+
+</td>
+<td class="mini-icons">
+	<a href="http://vk.com/nastachku"><img alt="В контакте" src="http://2012.nastachku.ru/skins/basic/customer/images/vkontakte.png"/></a>&nbsp;
+	<a href="http://www.facebook.com/groups/244785302277703/"><img alt="Facebook" src="http://2012.nastachku.ru/skins/basic/customer/images/fb.png"/></a>&nbsp;
+	<a href="https://twitter.com/#!/nastachku"><img alt="Twitter" src="http://2012.nastachku.ru/skins/basic/customer/images/twi.png"/></a>
+</td>
+</tr>
+</table>
+
+
+
+
+<p class="bottom-copyright class">&copy; 2012-2015 &laquo;Стачка&raquo;. &nbsp;Любое использование материала приветствуется при гиперссылке.
+</p>
+
+<div class="metrics">
+
+
+
+<script type="text/javascript">
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-38587983-1', 'nastachku.ru');
+  ga('require', 'displayfeatures');
+  ga('require', 'linkid', 'linkid.js');
+  /* Openstat parser v3 minimized */
+  var campaign={_params:{},_parsed:!1,_decode64:function(a){if('function'==typeof window.atob)return atob(a);var r,t,n,i,e,s,o,p,d='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=',h=0,c=0,f='',m=[];if(!a)return a;a+='';do i=d.indexOf(a.charAt(h++)),e=d.indexOf(a.charAt(h++)),s=d.indexOf(a.charAt(h++)),o=d.indexOf(a.charAt(h++)),p=i<<18|e<<12|s<<6|o,r=p>>16&255,t=p>>8&255,n=255&p,m[c++]=64==s?String.fromCharCode(r):64==o?String.fromCharCode(r,t):String.fromCharCode(r,t,n);while(h<a.length);return f=m.join('')},_parse:function(){var a=window.location.search.substr(1),r=a.split('&');this._params={};for(var t=0;t<r.length;t++){var n=r[t].split('=');this._params[n[0]]=n[1]}this._parsed=!0},hasMarker:function(){return window.location.search.indexOf('utm_')>0?!1:(this._parsed||this._parse(),'undefined'!=typeof this._params._openstat?!0:!1)},buildCampaignParams:function(){if(!this.hasMarker())return!1;var a=this._decode64(this._params._openstat),r=a.split(';');return{campaignName:r[1],campaignSource:r[0],campaignMedium:'cpc',campaignContent:r[2]+' ('+r[3]+')'}}};
+  var hit=campaign.hasMarker()?campaign.buildCampaignParams():{};
+  hit.page=location.pathname+location.search+location.hash;
+  ga('send', 'pageview', hit);
+  /* Accurate bounce rate by time */
+  document.referrer&&0==document.referrer.split('/')[2].indexOf(location.hostname)||setTimeout(function(){ga('send','event','Сеансы','Сеансы без отказов',location.pathname)},15000);
+
+</script>
+
+<!-- Yandex.Metrika counter -->
+<div style="display:none;"><script type="text/javascript">
+(function(w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter12986590 = new Ya.Metrika({id:12986590, enableAll: true, webvisor:true});
+        }
+        catch(e) { }
+    });
+})(window, "yandex_metrika_callbacks");
+</script></div>
+<script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+<noscript><div><img src="http://mc.yandex.ru/watch/12986590" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t42.6;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet' "+
+"border='0' width='31' height='31'><\/a>")
+//--></script><!--/LiveInternet-->
+
+
+
+</div>
+
+
+
+
+			<div class="footer-bottom-helper"><span class="float-left">&nbsp;</span><span class="float-right">&nbsp;</span></div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+var proto = (document.location.protocol=='https:')?'https:':'http:';
+var host = proto+'//widget.copiny.com';
+document.write(unescape("%3Cscript src='" + host + "/static/js/widget.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" charset="utf-8">
+        var copinyWidgetOptions = {
+	position: 'left',
+        hostcommunity:'http://stachka.copiny.com',
+        newwindow: '0',
+        type: 'idea',
+	color: 	  '#ff8400',
+        border:   '#ffffff',
+	round:    '1',
+	title:	  "\u041e\u0431\u0440\u0430\u0442\u043d\u0430\u044f \u0441\u0432\u044f\u0437\u044c",
+        cache:   "9ca936d041c7637244c3fb8ef4a8ea6c\/9ca936d041c7637244c3fb8ef4a8ea6c\/ejOwVXUxULV0BZFOhqouhqoWBmC2AZhtBGa7IIm4aYMpQ7CQEUQIzDYHs50B",
+        community:4196
+};
+initCopinyWidget(copinyWidgetOptions);
+CopinyWidget.showTab();
+</script>
+
+			</div>
+
+
+</body>
+
+</html>

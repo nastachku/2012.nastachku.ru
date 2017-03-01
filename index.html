@@ -1,0 +1,981 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<title>Стачка! Конференция 2012 (Архив)</title>
+
+<base href="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="ru" />
+<meta name="description" content="Стачка конференция - Веб-технологии, Электронная коммерция, Программирование, Менеджмент в ИТ, ИТ-стартапы, ИТ на службе общества." />
+<meta name="keywords" content="Стачка конференция." />
+
+<meta property="og:title" content="Стачка! Конференция" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://nastachku.ru" />
+<meta property="og:image" content="skins/basic/customer/images/logo.gif" />
+<meta property="og:site_name" content="Стачка! Конференция" />
+<meta property="fb:admins" content="1839867817" />
+
+<meta property="vk:image" content="skins/basic/customer/images/logo.gif" />
+
+
+<link href="skins/basic/customer/images/icons/favicon.ico" rel="shortcut icon" />
+
+
+<link href="skins/basic/customer/css/ui/jqueryui.css" rel="stylesheet" type="text/css"/>
+<link href="skins/basic/customer/styles.css" rel="stylesheet" type="text/css" />
+<link href="skins/basic/customer/print.css" rel="stylesheet" media="print" type="text/css" />
+<link href="skins/basic/customer/dropdown.css" rel="stylesheet" type="text/css" />
+<!--[if lte IE 7]>
+<link href="/skins/basic/customer/styles_ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+<link href="skins/basic/customer/addons/tags/styles.css" rel="stylesheet" type="text/css" />
+<link href="skins/basic/customer/addons/news_and_emails/styles.css" rel="stylesheet" type="text/css" />
+<link href="skins/basic/customer/addons/polls/styles.css" rel="stylesheet" type="text/css" />
+<link href="skins/basic/customer/addons/hot_deals_block/styles.css" rel="stylesheet" type="text/css" />
+
+
+<link type="text/css" rel="stylesheet" href="http://www.graddit.com/css/graddit.css" />
+<link type="text/css" rel="stylesheet" href="js/jquery.ui.stars/jquery.ui.stars.min.css"/><script type="text/javascript" src="lib/js/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="lib/js/jqueryui/jquery-ui.custom.min.js"></script>
+<script type="text/javascript" src="lib/js/tools/tooltip.min.js"></script>
+<script type="text/javascript" src="lib/js/appear/jquery.appear-1.1.1.js"></script>
+
+<script type="text/javascript" src="js/editors/_empty.editor.js"></script>
+
+<script type="text/javascript" src="js/core.js"></script>
+<script type="text/javascript" src="js/ajax.js"></script>
+<script type="text/javascript" src="js/jquery.ui.stars/jquery.ui.stars.min.js"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+	$(document).ready(function(){
+
+		$('.foruser').children().remove();
+		$('.foruser').append('<p class="vote-tip">Пожалуйста, <a href="http://2012.nastachku.ru/'+&#32;document.location.href&#32;+'#sw_login">авторизируйтесь</a>, чтобы проголосовать.</p>');
+
+	});
+
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+var index_script = 'index.php';
+var current_path = '';
+var changes_warning = 'Y';
+
+var lang = {
+	cannot_buy: 'Вы не можете купить товар с таким набором параметров',
+	no_products_selected: 'Товары не выбраны',
+	error_no_items_selected: 'Нет выбранных записей! Для выполнения этого действия должна быть выбрана хотя бы одна запись.',
+	delete_confirmation: 'Вы уверены, что хотите удалить выбранные записи?',
+	text_out_of_stock: 'Нет в наличии',
+	in_stock: 'В наличии',
+	items: 'штук(-а)',
+	text_required_group_product: 'Пожалуйста, выберите товар для указанной группы [group_name]',
+	notice: 'Оповещение',
+	warning: 'Предупреждение',
+	loading: 'Загрузка...',
+	none: 'Пусто',
+	text_are_you_sure_to_proceed: 'Вы уверены, что хотите продолжить?',
+	text_invalid_url: 'Вы ввели неправильную ссылку',
+	text_cart_changed: 'Содержимое корзины было изменено. Нажмите \"OK\" для того, чтобы сохранить изменения, или \"Cancel\", чтобы оставить содержимое неизменным.',
+	error_validator_email: 'E-Mail адрес в поле <b>[field]<\/b> неправильный.',
+	error_validator_twitter: 'Адрес twitter неправильный. Придерживайтесь формата<br/><span class=\"grey\">http://twitter.com/#!/your_profile<\/span>',
+	error_validator_vkontakte: 'Адрес vk.com неправильный. Придерживайтесь формата<br/><span class=\"grey\">http://vk.com/your_profile<\/span>',
+	error_validator_facebook: 'Адрес facebook неправильный. Придерживайтесь формата<br/><span class=\"grey\">http://www.facebook.com/your_profile http://www.facebook.com/01010101001<\/span>',
+	error_validator_confirm_email: 'E-Mail адреса в поле <b>[field]<\/b> и в поле подтверждения не совпадают.',
+	error_validator_phone: 'Неверный номер телефона в поле <b>[field]<\/b>. Правильный формат: (555) 555-55-55.',
+	error_validator_integer: 'Значение поля <b>[field]<\/b> неправильное. Значение должно быть целым числом.',
+	error_validator_multiple: 'Поле <b>[field]<\/b> не имеет выбранных параметров.',
+	error_validator_password: 'Пароли в полях <b>[field2]<\/b> и <b>[field1]<\/b> не совпадают.',
+	error_validator_required: 'Поле <b>[field]<\/b> обязательное.',
+	error_validator_zipcode: 'Неверный почтовый индекс в поле <b>[field]<\/b>. Правильный формат: [extra].',
+	error_validator_message: 'Значение поля <b>[field]<\/b> - неправильно.',
+	text_page_loading: 'Загрузка... Ваш запрос выполняется, пожалуйста, подождите.',
+	view_cart: 'Корзина',
+	checkout: 'Оформить заказ',
+	product_added_to_cart: 'Товар добавлен в корзину',
+	products_added_to_cart: 'Товары добавлены в Вашу корзину',
+	product_added_to_wl: 'Товар добавлен в Желаемое',
+	product_added_to_cl: 'Товар добавлен в Список сравнения',
+	close: 'Закрыть',
+	error: 'Ошибка',
+	error_ajax: 'Ой, произошла ошибка ([error]). Пожалуйста, попробуйте еще раз.',
+	text_changes_not_saved: 'Сделанные изменения не были сохранены.',
+	text_data_changed: 'Сделанные изменения не были сохранены.\n\nНажмите OK, чтобы продолжить, или Cancel, чтобы остаться на странице.',
+//[GTR]
+	text_vk_error: 'Неправильный формат адреса страницы vk.com.',
+	text_facebook_error: 'Неправильный формат адреса страницы Facebook',
+	text_twitter_error: 'Неправильный формат адреса страницы Twitter'
+//[/GTR]
+}
+
+var currencies = {
+	'primary': {
+		'decimals_separator': '.',
+		'thousands_separator': ',',
+		'decimals': '2',
+		'coefficient': '1.00000'
+	},
+	'secondary': {
+		'decimals_separator': '.',
+		'thousands_separator': ',',
+		'decimals': '2',
+		'coefficient': '1.00000'
+	}
+};
+
+var default_editor = '_empty';
+var default_previewer = 'fancybox';
+
+var cart_language = 'RU';
+var images_dir = '/skins/basic/customer/images';
+var skin_name = 'basic';
+var notice_displaying_time = 13;
+var cart_prices_w_taxes = false;
+var translate_mode = false;
+var regexp = new Array();
+
+
+
+$(document).ready(function(){
+	jQuery.runCart('C');
+});
+
+document.write('<style>.cm-noscript { display:none }</style>'); // hide noscript tags
+//]]>
+</script>
+
+<!--[if lt IE 8]>
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+	$('ul.dropdown li').hover(function(){
+		$(this).addClass('hover');
+		$('> .dir',this).addClass('open');
+		$('ul:first',this).css('display', 'block');
+	},function(){
+		$(this).removeClass('hover');
+		$('.open',this).removeClass('open');
+		$('ul:first',this).css('display', 'none');
+	});
+});
+//]]>
+</script>
+<![endif]-->
+
+
+<script type="text/javascript" src="addons/recurring_billing/js/func.js"></script>
+<script type="text/javascript">
+
+// Extend core function
+fn_register_hooks('recurring_billing', ['check_exceptions']);
+
+</script>
+<script type="text/javascript" src="http://userapi.com/js/api/openapi.js?48"></script>
+
+<script type="text/javascript">
+
+  VK.init({apiId: 2828604, onlyWidgets: true});
+
+</script>
+
+
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+
+$(".prog-quote p:last-child").addClass("last");
+var n = $('.prog-quote').length;
+for (var i=0; i < n; i++){
+
+if ($('.prog-quote:eq('+i+')').height() > 185){
+
+$('.prog-quote:eq('+i+')').css('height','185px');
+$('.prog-quote:eq('+i+')').addClass('collapsed');
+$('.prog-quote:eq('+i+')').after('<div class="open">Развернуть</div>');
+
+};
+
+};
+	$('.prog-quote.collapsed + .open').click(function(){
+        var height = $('.prog-quote').height();
+	$(this).prev('.prog-quote.collapsed').css('height','100%');
+        $(this).prev('.prog-quote.collapsed').removeClass('collapsed');
+        $(this).hide();
+	});
+
+var anchor = location.hash.replace('#', '');
+
+
+$('a[name='+anchor+']').siblings('.open').click();
+//$('.prog-quote').parent('div').addClass('doc');
+});
+
+//]]>
+</script>
+</head>
+
+<body class="main index index">
+<div class="helper-container">
+	<a name="top"></a>
+
+<div id="ajax_loading_box" class="ajax-loading-box"><div class="right-inner-loading-box"><div id="ajax_loading_message" class="ajax-inner-loading-box">Загрузка...</div></div></div>
+
+
+
+
+
+<div id="container" class="container-long">
+		<div id="header">
+<div class="header-helper-container">
+	<div class="logo-image">
+		<a href="index.html"><img id="main-logo" src="http://2012.nastachku.ru/skins/basic/customer/images/logo.gif" width="137" height="70" border="0" alt="ООО &quot;Симбирские технологии&quot;" /></a>
+	</div>
+
+
+	<div class="mission">
+
+		<span class="location-city">
+			Ульяновск
+		</span>
+
+		<span class="date">
+			13-14 АПРЕЛЯ 2012
+		</span>
+
+		<span class="location-place">
+			Дом Пионеров
+		</span>
+
+	</div>
+
+
+<div id="top_menu">
+<ul class="top-menu dropdown"><li class="first-level "><a href="reporters.html">Докладчики</a></li><li class="first-level "><a href="participants.html">Я пойду</a></li><li class="first-level "><a href="sponsors.html">Спонсоры</a></li><li class="first-level "><a href="program.html">Программа</a></li><li class="first-level "><a href="contacts.html">Контакты</a></li><li class="first-level"><a href="community.html">Кто идет(1541)?</a></li></ul></div>
+
+</div>
+</div>
+
+	<div id="content">
+		<div class="content-helper clear">
+						<div class="header">
+				<div class="block-group clear"><div class="el-1 clear-both"><div class="mainbox-container">
+		<h1 class="mainbox-title">Стачка! 2013</h1>
+		<div class="mainbox-body"><div class="wysiwyg-content">
+<p class="nastachku-invite"><span>Понравилось на Стачке?!</span>
+<span>В этом году будет круче! Больше именитых спикеров, еще больше участников и, конечно же,  еще зажигательнее на афтепати!</span>
+<span>До 12 апреля осталось совсем немного времени… Бегом на регистрацию!</span></p>
+
+</div></div>
+</div></div><div class="el-2 clear-both"><div class="mainbox-container">
+</div></div><div class="el-3 clear-both"><div class="sidebox-wrapper ">
+	<h3 class="sidebox-title">Ссылки про Стачку</h3>
+	<div class="sidebox-body"><div class="wysiwyg-content">
+<div class="links-group">
+<div class="head">Слайды</div>
+<ul>
+<li>
+<div class="link-title">Венчурные деньги</div>
+<a href="http://prezi.com/qxoradcy17qe/presentation/?auth_key=5b6d3c84ed0fcbbd2fc5a416a61249b48ed6f4eb">http://prezi.com/qxoradcy17qe/presentation/?auth_key=5b6d3c84ed0fcbbd2fc5a416a61249b48ed6f4eb</a></li>
+<li>
+<div class="link-title">Это мы, опилки</div>
+<a href="http://qetzal.ru/post/21160683856">http://qetzal.ru/post/21160683856</a></li>
+<li>
+<div class="link-title">Magento 2 &amp; X.commerce: Our lecture on local IT conference &ldquo;Stachka&rdquo;</div>
+<a href="http://turnkeye.com/blog/magento-2-x-commerce-conference-stachka/">http://turnkeye.com/blog/magento-2-x-commerce-conference-stachka/</a></li>
+<li>
+<div class="link-title">Ульяновск &mdash; яйцо Силиконовой долины</div>
+<a href="http://nastachku.ru/slides/ulyanovsk-egg.pdf">http://nastachku.ru/slides/ulyanovsk-egg.pdf</a></li>
+</ul>
+</div>
+<div class="links-group">
+<div class="head">Посты</div>
+<ul>
+<li>
+<div class="link-title">Стачка: как это было</div>
+<a href="http://delexp.net/stachka-kak-eto-bylo/">http://delexp.net/stachka-kak-eto-bylo/</a></li>
+<li>
+<div class="link-title">IT-конференция "Стачка" в Ульяновске</div>
+<a href="http://www.ultop.ru/gallery/10074/2/">http://www.ultop.ru/gallery/10074/2/</a></li>
+<li>
+<div class="link-title">&laquo;Стачка&raquo; в Ульяновской области стала третьей по величине и масштабу ИТ-конференцией в России</div>
+<a href="http://mosaica.ru/news/obshchestvo/2012/04/13/19724">http://mosaica.ru/news/obshchestvo/2012/04/13/19724</a></li>
+<li>
+<div class="link-title">&laquo;Стачка&raquo;. Часть 2. Что реально получили</div>
+<a href="http://ul-people.ru/2012/stachka-chast-2-chto-realno-poluchili">http://ul-people.ru/2012/stachka-chast-2-chto-realno-poluchili</a></li>
+<li>
+<div class="link-title">Jay-Tech.Ru | Слайды с моего доклада на "Стачке"</div>
+<a href="http://jay-is-here.livejournal.com/6847.html">http://jay-is-here.livejournal.com/6847.html</a></li>
+<li>
+<div class="link-title">&laquo;Стачка&raquo;. Часть первая. Ожидания</div>
+<a href="http://ul-people.ru/2012/stachka-chast-pervaya-ozhidaniya">http://ul-people.ru/2012/stachka-chast-pervaya-ozhidaniya</a></li>
+<li>
+<div class="link-title">&laquo;Стачка&raquo; или мои 3 дня в Ульяновске</div>
+<a href="http://netbloga.ru/stachka-ili-moi-3-dnya-v-ulyanovske/">http://netbloga.ru/stachka-ili-moi-3-dnya-v-ulyanovske/</a></li>
+<li>
+<div class="link-title">Stachka &mdash; взгляд сбоку!</div>
+<a href="http://sergenet.ru/stachka-vzglyad-sboku/">http://sergenet.ru/stachka-vzglyad-sboku/</a></li>
+<li>
+<div class="link-title">This is STAAACHKAAA!..</div>
+</li>
+<li>
+<div class="link-title">Апрельские тезисы на Стачке в Ульяновске</div>
+<a href="http://alexio-marziano.livejournal.com/30247.html">http://alexio-marziano.livejournal.com/30247.html</a></li>
+<li>
+<div class="link-title">Побывал #nastachku в #ulsk</div>
+<a href="http://xeonvs.livejournal.com/6393.html">http://xeonvs.livejournal.com/6393.html</a></li>
+<li>
+<div class="link-title">IT-конференция "Стачка" в Ульяновске: фото</div>
+<a href="http://www.ultop.ru/news/7220/">http://www.ultop.ru/news/7220/</a></li>
+<li>
+<div class="link-title">&laquo;Стачка&raquo; в Ульяновске. Айтишная революция</div>
+<a href="http://ul-people.ru/2012/stachka-v-ulyanovske-ajtishnaya-revolyuciya">http://ul-people.ru/2012/stachka-v-ulyanovske-ajtishnaya-revolyuciya</a></li>
+<li>
+<div class="link-title">Впечатления от Стачки</div>
+<a href="http://masterit.livejournal.com/58006.html">http://masterit.livejournal.com/58006.html</a></li>
+<li>
+<div class="link-title">На стачку! Впечатления и обзор конференции. День 1.</div>
+<a href="http://seriyps.ru/blog/2012/04/17/na-stachku-vpechatleniya-i-obzor-konferencii-day1/">http://seriyps.ru/blog/2012/04/17/na-stachku-vpechatleniya-i-obzor-konferencii-day1/</a></li>
+<li>
+<div class="link-title">&laquo;Стачка!&raquo; - это здорово!</div>
+<a href="http://it.ul-online.ru/news/?news_id=6492">http://it.ul-online.ru/news/?news_id=6492</a></li>
+<li>
+<div class="link-title">Международное сообщество высоко оценило уровень развития сферы ИТ в Ульяновской области</div>
+<a href="http://www.ul.aif.ru/society/news/45054">http://www.ul.aif.ru/society/news/45054</a></li>
+<li>
+<div class="link-title">Российские специалисты IT выступили в Ульяновске</div>
+<a href="http://www.ulbusiness.ru/index/news/one/14/1/4624/">http://www.ulbusiness.ru/index/news/one/14/1/4624/</a></li>
+<li>
+<div class="link-title">В Ульяновской области завершила свою работу профессиональная ИТ-конференция &laquo;Стачка&raquo;</div>
+<a href="http://it.ulgov.ru/news/ministry/2012.04.16/152/">http://it.ulgov.ru/news/ministry/2012.04.16/152/</a></li>
+<li>
+<div class="link-title">МИЦ помогает в проведении конференции "Стачка"</div>
+<a href="http://www.ulmic.ru/life/87-it-project/1768-stachka-start">http://www.ulmic.ru/life/87-it-project/1768-stachka-start</a></li>
+<li>
+<div class="link-title">IT-конференция &laquo;Стачка&raquo; в Ульяновске: для всех, кто хочет знать, что будет завтра, чтобы использовать информационные технологии уже сегодня</div>
+<a href="http://www.ul.aif.ru/society/news/44970/3">http://www.ul.aif.ru/society/news/44970/3</a></li>
+<li>
+<div class="link-title">Частное мнение: Стачка! Конференция (первый день)</div>
+<a href="http://gongled.ru/5331.html">http://gongled.ru/5331.html</a></li>
+<li>
+<div class="link-title">&laquo;Стачка&raquo; в Ульяновске.</div>
+<a href="http://bespalova-mp.livejournal.com/13476.html">http://bespalova-mp.livejournal.com/13476.html</a></li>
+<li>
+<div class="link-title">На стачку! Впечатления и обзор конференции. День 2.</div>
+<a href="http://seriyps.ru/blog/2012/04/17/na-stachku-vpechatleniya-i-obzor-konferencii-day-2/">http://seriyps.ru/blog/2012/04/17/na-stachku-vpechatleniya-i-obzor-konferencii-day-2/</a></li>
+<li>
+<div class="link-title">О том как столкнулось 1500 человек и без побоев.</div>
+<a href="http://stas-mihaylov.livejournal.com/2815.html">http://stas-mihaylov.livejournal.com/2815.html</a></li>
+<li>
+<div class="link-title">В Ульяновске прошла первая IT-конференция Стачка.</div>
+<a href="http://www.ul.aif.ru/society/article/24549">http://www.ul.aif.ru/society/article/24549</a></li>
+<li>
+<div class="link-title">Вадим Захаров | Продвижение интернет магазина с минимальными затратами</div>
+<a href="http://delexp.net/prodvizhenie-internet-magazina-s-minimalnymi-zatratami/">http://delexp.net/prodvizhenie-internet-magazina-s-minimalnymi-zatratami/</a></li>
+<li>
+<div class="link-title">Геннадий Козарь | DIOGENES сделал два залпа на &laquo;Стачке&raquo;, выступив с докладами на конференции по интернет-маркетингу (13-14 апреля 2012)</div>
+<a href="http://gena-kozar.livejournal.com/50982.html">http://gena-kozar.livejournal.com/50982.html</a></li>
+</ul>
+</div>
+<div class="links-group">
+<div class="head">Видео</div>
+<ul>
+<li>
+<div class="link-title">Конференция &laquo;Стачка!&raquo; (г. Ульяновск, 2012)</div>
+<a href="http://www.youtube.com/watch?v=UTP5hC-WIK0&amp;feature=youtu.be">http://www.youtube.com/watch?v=UTP5hC-WIK0&amp;feature=youtu.be</a></li>
+<li>
+<div class="link-title">Стачка! &mdash; Следи за дорогой! (Дмитрий Вислов)</div>
+<a href="http://www.youtube.com/watch?v=Y716R35HsiQ&amp;feature=youtu.be">http://www.youtube.com/watch?v=Y716R35HsiQ&amp;feature=youtu.be</a></li>
+<li>
+<div class="link-title">За 10 часов до начала Стачки в Ульяновске</div>
+<a href="http://www.youtube.com/watch?feature=endscreen&amp;NR=1&amp;v=SnQGDvGWd-s">http://www.youtube.com/watch?feature=endscreen&amp;NR=1&amp;v=SnQGDvGWd-s</a></li>
+<li>
+<div class="link-title">Ульяновскую "Стачку" посетило более 1000 человек</div>
+<a href="http://mosaica.ru/video/2012/04/17/363">http://mosaica.ru/video/2012/04/17/363</a></li>
+<li>
+<div class="link-title">Seo сходка</div>
+<a href="http://www.youtube.com/watch?v=O7Sual-VcM0">http://www.youtube.com/watch?v=O7Sual-VcM0</a></li>
+</ul>
+</div>
+<div class="links-group">
+<div class="head">Фото</div>
+<ul>
+<li>
+<div class="link-title">&laquo;Самое худшее в digital &mdash; котики и сиськи&raquo;, Дима Козлов</div>
+<a href="https://twitter.com/#!/bitpulse/status/191116080746479616/photo/1">https://twitter.com/#!/bitpulse/status/191116080746479616/photo/1</a></li>
+<li>
+<div class="link-title">Нижний зал</div>
+<a href="https://twitter.com/#!/bekreyev/status/191092846386876417/photo/1">https://twitter.com/#!/bekreyev/status/191092846386876417/photo/1</a></li>
+<li>
+<div class="link-title">Wi-Fi Стачка может работать как по старому протоколу IPv4 (EVO), так и по IPv6 (Эквант), его запуск 06.06.2012!</div>
+<a href="https://twitter.com/#!/bekreyev/status/190747371334938624">https://twitter.com/#!/bekreyev/status/190747371334938624</a></li>
+</ul>
+</div>
+</div></div>
+	<!-- <div class="sidebox-bottom"><span>&nbsp;</span></div> -->
+</div></div><div class="el-4 clear-both"><div class="wysiwyg-content">
+			<p><a class="banner-big" href="index.html#">Какие темы<br /> мы хотим обсуждать?</a></p>
+		</div>
+				<div class="wysiwyg-content">
+			<div class="left-side"><a class="theme-section c1" href="web-tech.html"> <span class="title">Веб-технологии</span> <span>Веб-дизайн, юзабилити, интернет-маркетинг, SEO</span> </a> <a class="theme-section c2" href="programmers.html"> <span class="title">Программирование</span> <span>Мобильные, облачные технологии, тренды,<br /> языки программирования, новые подходы в<br /> решении задач</span>&nbsp;</a><a class="theme-section c3" href="it-startup.html"><span class="title">IT-стартапы</span> <span>Истории успеха, где брать деньги, как начинать</span> </a></div>
+<div class="right-side"><a class="theme-section c4" href="e-commerce.html"> <span class="title">Электронная коммерция</span> <span>Тренды в России, на западе, развитие платформ для электронной коммерции</span> </a> <a class="theme-section c5" href="it-management.html"> <span class="title">Менеджмент в IT</span> <span>Организация IT-компании, кадры для IT, куда пойти работать</span>&nbsp;</a><a class="theme-section c6" href="it-serve-society.html"><span class="title">IT на службе общества</span> <span>Развитие IT в Ульяновске, государство и IT,  польза от IT</span> </a></div>
+		</div></div></div>
+			</div>
+
+						<div class="central-column">
+				<div class="central-content">
+
+
+
+<div class="cm-notification-container"></div>
+
+					<div class="block-group clear"><div class="el-1" style="float: left; width:48%"><div class="sidebox-wrapper ">
+	<h3 class="sidebox-title">Что мы хотим сделать?</h3>
+	<div class="sidebox-body"><div class="wysiwyg-content">
+<p>
+	Мероприятие для IT-шников, где можно узнать что-то новое, познакомиться с интересными людьми как из Ульяновска, так и со всей страны.<br />
+	<br />
+	Мероприятие планируется в формате конференции (т.е. параллельно на нескольких площадках выступают докладчики, проходят круглые столы, работает выставка).</p>
+
+</div></div>
+	<!-- <div class="sidebox-bottom"><span>&nbsp;</span></div> -->
+</div></div><div class="el-2" style="float: left; width:48%"><div class="sidebox-wrapper ">
+	<h3 class="sidebox-title">Кто наша аудитория, кого мы ждём?</h3>
+	<div class="sidebox-body"><div class="wysiwyg-content">
+<p>
+	Мероприятие будет интересно тем, кто каким-либо образом связывает свою жизнь с IT.<br />
+	<br />
+	Это и программисты, и веб-дизайнеры, и люди, которые хотят связать своё будущее с IT, и те, кто хотят знать, что будет завтра, чтобы использовать информационные технологии уже сегодня.</p>
+
+</div></div>
+	<!-- <div class="sidebox-bottom"><span>&nbsp;</span></div> -->
+</div></div></div><script type="text/javascript" src="addons/banners/js/jcarousel.js"></script>
+
+<div>
+
+<div class="carousel imageSliderExt" style="position:relative;">
+		<div class="carousel-buttons-container">
+							<div class="carousel-button 1"><p>&nbsp;</p></div>
+							<div class="carousel-button 2"><p>&nbsp;</p></div>
+							<div class="carousel-button 3"><p>&nbsp;</p></div>
+							<div class="carousel-button 4"><p>&nbsp;</p></div>
+							<div class="carousel-button 5"><p>&nbsp;</p></div>
+							<div class="carousel-button 6"><p>&nbsp;</p></div>
+							<div class="carousel-button 7"><p>&nbsp;</p></div>
+							<div class="carousel-button 8"><p>&nbsp;</p></div>
+							<div class="carousel-button 9"><p>&nbsp;</p></div>
+							<div class="carousel-button 10"><p>&nbsp;</p></div>
+							<div class="carousel-button 11"><p>&nbsp;</p></div>
+							<div class="carousel-button 12"><p>&nbsp;</p></div>
+							<div class="carousel-button 13"><p>&nbsp;</p></div>
+							<div class="carousel-button 14"><p>&nbsp;</p></div>
+					</div>
+	<div class="jCarouselLite">
+		<ul>
+												<li><div class="banner-body banner_kudashkina">
+	<div class="quote">
+		<p>
+			Приходите на конференцию. Я расскажу о стартапах и о том, как выводить проекты на самую высокую орбиту при минимальных стартовых данных, как создавать стратегию и продавать идеи.</p>
+	</div>
+	<div class="signature">
+		<span>Таисия Кудашкина</span> CEO<br />
+		tulp.ru</div>
+</div>
+</li>
+																<li><div class="banner-body banner_shukalova">
+	<div class="quote">
+		<p>
+			Приходите на конференцию. Я расскажу о предпроектном проектировании с точки зрения заказчика: кому нужен предпроект, исполнителю или заказчику? Что он должен содержать и как продать предпроект?</p>
+	</div>
+	<div class="signature">
+		<span>Екатерина Шукалова</span> Директор интернет-агентства полного цикла &laquo;ФЕРТ&raquo;,<br />
+		Участник Ассоциации Интернет Разработчиков</div>
+</div>
+</li>
+																<li><div class="banner-body banner_belozerova">
+	<div class="quote">
+		<p>
+			Приходите на конференцию. Я расскажу вам, что такое дизайн-менеджмент и как дизайн-студиям удается конвертировать неосязаемые творческие идеи в весьма реальную прибыль.</p>
+	</div>
+	<div class="signature">
+		<span>Анна Белозерова</span> Руководитель отдела дизайна<br />
+		Simtech, Ульяновск</div>
+</div>
+</li>
+																<li><div class="banner-body banner_lebedev">
+	<div class="quote">
+		<p>
+			Приходите на конференцию. Я расскажу о том, как мы используем технологии для создания новых интересных идей и решения инсайтов: роботы, РФИД-метки, интерактивные инсталляции и проч.</p>
+	</div>
+	<div class="signature">
+		<span>Василий Лебедев</span> Креативный директор<br />
+		Red Keds, Москва</div>
+</div>
+</li>
+																<li><div class="banner-body banner_egorushkin">
+	<div class="quote">
+		<p>
+			Приходите на конференцию. Я расскажу о маркетинге лояльности, о видах лояльности и ее уровнях, а также о том, почему у нас покупают и почему покупатели уходят к конкурентам.</p>
+	</div>
+	<div class="signature">
+		<span>Сергей Егорушкин</span> CEO<br />
+		Digly.ru, Москва</div>
+</div>
+</li>
+																<li><div class="banner-body banner_walkin">
+	<div class="quote">
+		<p>
+			Приходите на конференцию. Расскажу про эффекты highload и надёжность SaaS. Зачем нужно понижать uptime, как Erlang влияет на эмиграцию, и другие неочевидные следствия простых решений.</p>
+	</div>
+	<div class="signature">
+		<span>Лев Валкин</span><br />
+		Echo, Silicon Valley</div>
+</div>
+</li>
+																<li><div class="banner-body banner_yurin">
+<div class="quote">
+<p>
+Приходите на конференцию. Я расскажу о такой противоречивой профессии, как SMM-специалист: зачем эти люди нужны компаниям и почему на SMM выделяют значительные бюджеты? Куда идет рынок SMM-услуг?
+</p>
+</div>
+<div class="signature">
+<span>Максим Юрин</span>
+SMM директор<br />
+Red Keds, Москва
+</div>
+</div></li>
+																<li><div class="banner-body banner_pomykalov">
+	<div class="quote">
+		<p>
+			Приходите на конференцию. Я постараюсь рассказать как об основах Scrum, так и о своем собственном опыте. А также о том, как трансформируется видение продукта в процессе, и где Scrum не работает</p>
+	</div>
+	<div class="signature">
+		<span>Глеб Помыкалов</span> Руководитель Web-команды<br />
+		Qik.com (Skype, Microsoft), Зеленоград</div>
+</div>
+</li>
+																<li><div class="banner-body banner_tihanov">
+	<div class="quote">
+		<p>
+			Приходите на конференцию. Расскажу о работе, проведенной при интернационализации веб-сайта и мобильных приложений Qik, допущенных ошибках и сделанных выводах.</p>
+	</div>
+	<div class="signature">
+		<span>Константин Тихонов</span> Разработчик<br />
+		Qik.com (Skype, Microsoft), Зеленоград</div>
+</div>
+</li>
+																<li><div class="banner-body banner_nikitin">
+	<div class="quote">
+		<p>
+			Приходите на конференцию. Мы поговорим о проблемах, существующих в области поисковой оптимизации (или SEO). Что-то не с поисковыми машинами? А может быть, что-то не так с самим SEO?</p>
+	</div>
+	<div class="signature">
+		<span>Иван Никитин</span> Ведущий аналитик и руководитель отдела продвижения<br />
+		www.binn.ru</div>
+</div>
+</li>
+																<li><div class="banner-body banner_vesnin">
+	<div class="quote">
+		<p>
+			Приходите на конференцию. Мы рассмотрим создание Искусственного Интеллекта в трехмерной среде и поговорим об играх всерьез &ndash; как со стороны игрока, так и со стороны разработчика.</p>
+	</div>
+	<div class="signature">
+		<span>Алексей Веснин</span><br />
+		Trinitech LLC</div>
+</div>
+</li>
+																<li><div class="banner-body banner_ponomar">
+	<div class="quote">
+		<p>
+			Приходите на конференцию. Я расскажу о проникновении Сети в нашу жизнь и о возможном будущем &laquo;социального&raquo; веба: к чему приведут сегодняшние &quot;социальные&quot; тренды лет эдак через 20?</p>
+	</div>
+	<div class="signature">
+		<span>Алексей Пономарь</span> генеральный директор<br />
+		&quot;Буферная Бухта&quot;</div>
+</div>
+</li>
+																<li><div class="banner-body banner_pavlushko">
+	<div class="quote">
+		<p>
+			Приходите на конференцию. Я расскажу, как и в каких целях avito.ru использует&nbsp;Sphinx. С какими проблемами мы столкнулись в условиях постоянно растущих нагрузок, какие решения были выбраны.</p>
+	</div>
+	<div class="signature">
+		<span>Роман Павлушко</span> Ведущий разработчик<br />
+		AVITO.ru, Москва</div>
+</div>
+</li>
+																<li><div class="banner-body banner_tkachev">
+	<div class="quote">
+		<p>
+			Приходите на конференцию. Я расскажу вам о социальных метриках и их использовании в SEO, а также поговорим о грядущей накрутке, как это было с поведенческими факторами</p>
+	</div>
+	<div class="signature">
+		<span>Василий Ткачев</span> Генеральный директор<br />
+		ООО &laquo;Инетессеншлс&raquo;</div>
+</div>
+</li>
+									</ul>
+	</div>
+
+	<div class="clear" style="height:0;"></div>
+<div class="j_triangle"></div>
+</div>
+
+
+<script type="text/javascript">
+
+var item_count = '14';
+
+var btns = new Array();
+
+for (var i = 1; i <= item_count; i++) {
+	btns[i-1] = '.imageSliderExt .' + i;
+}
+
+$(".imageSliderExt .jCarouselLite").jCarouselLite({
+	visible: 1,
+	btnGo: btns,
+	auto: 10000
+});
+</script>
+
+</div><div class="mainbox-container">
+		<div class="mainbox-body"></div>
+</div>
+				</div>
+			</div>
+
+
+
+
+		</div>
+	</div>
+
+
+</div>
+
+
+<div class="border-long orange clear-both"></div>
+<div class="container-long">
+						<div class="bottom clear-both">
+				<div class="block-group clear"><div class="el-1" style="float: left; width:64%"><div class="sidebox-wrapper ">
+	<h3 class="sidebox-title">Организаторы</h3>
+	<div class="sidebox-body">		<div class="spon center">
+		<a href="http://it.ulgov.ru/" >		<img class=" "  id="det_img_1766458991" src="images/promo/0/ulgov.gif" width="73" height="62" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://itmcompany.ru/" >		<img class=" "  id="det_img_1786910824" src="images/promo/0/itm.jpg" width="130" height="56" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.simtech.ru/" >		<img class=" "  id="det_img_1291307767" src="images/promo/0/simtech.gif" width="129" height="58" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.kaize.ru/" >		<img class=" "  id="det_img_404247432" src="images/promo/0/kajdzen.gif" width="130" height="58" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://m-st.ru/" >		<img class=" "  id="det_img_1229554665" src="images/promo/0/mst.gif" width="108" height="58" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.interra-group.ru/" >		<img class=" "  id="det_img_1714617874" src="images/promo/0/interra.gif" width="87" height="75" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://itc73.ru/" >		<img class=" "  id="det_img_265345315" src="images/promo/0/itc.gif" width="154" height="75" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://platidoma.ru/" >		<img class=" "  id="det_img_75806726" src="images/promo/0/platidoma.gif" width="144" height="71" alt=""  border="0" />		</a>	</div>
+	</div>
+	<!-- <div class="sidebox-bottom"><span>&nbsp;</span></div> -->
+</div></div><div class="el-2" style="float: left; width:32%"><div class="sidebox-wrapper ">
+	<h3 class="sidebox-title">Генеральный спонсор</h3>
+	<div class="sidebox-body">		<div class="spon center">
+		<a href="http://www.skype.com" >		<img class=" "  id="det_img_1700057298" src="images/promo/0/skype.png" width="88" height="40" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://new.undev.ru/" target="_blank">		<img class=" "  id="det_img_80894180" src="images/promo/0/Undev.jpg" width="160" height="39" alt=""  border="0" />		</a>	</div>
+	</div>
+	<!-- <div class="sidebox-bottom"><span>&nbsp;</span></div> -->
+</div></div><div class="el-3 clear-both"><div class="sidebox-wrapper ">
+	<h3 class="sidebox-title">Спонсоры</h3>
+	<div class="sidebox-body"><div class="wysiwyg-content">
+<div class="spon-bann clear">
+	<a href="http://badoo.com/" target="_blank"><img alt="" border="0" src="images/promo/0/badoo-off.jpg" /></a> <a href="http://aboutecho.com/" target="_blank"><img alt="" border="0" src="images/promo/0/echo-off.jpg" /></a><a href="http://simbirsoft.com/" target="_blank"><img alt="" border="0" src="images/promo/0/simbirsoft-off.jpg" /></a><a href="http://www.netcat.ru/" target="_blank"><img alt="" border="0" src="images/promo/0/netcat-off.jpg" /></a><a href="http://www.mosaica.ru/" target="_blank"><img alt="" border="0" src="images/promo/0/mosaika-off.jpg" /></a><a href="http://www.itech-group.ru/" target="_blank"><img alt="" border="0" src="images/promo/0/itech-off.jpg" /></a><a href="http://www.rt.ru/" target="_blank"><img alt="" border="0" src="images/promo/0/rostelekom-off.jpg" /></a></div>
+<div class="legend clear clear-both">
+	<span class="off-sponsor">&mdash; официальный спонсор </span> <span class="gold-sponsor"> &mdash; золотой спонсор </span> <span class="plat-sponsor"> &mdash; платиновый спонсор </span></div>
+
+</div></div>
+	<!-- <div class="sidebox-bottom"><span>&nbsp;</span></div> -->
+</div></div><div class="el-4 clear-both"><div class="sidebox-wrapper ">
+	<h3 class="sidebox-title">Интернет партнеры</h3>
+	<div class="sidebox-body">		<div class="spon center">
+		<a href="http://www.evo73.ru/" target="_blank">		<img class=" "  id="det_img_1966146697" src="images/promo/0/evo.jpg" width="170" height="62" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.dlink.ru/" target="_blank">		<img class=" "  id="det_img_1188780545" src="images/promo/0/dlink.jpg" width="160" height="48" alt=""  border="0" />		</a>	</div>
+	</div>
+	<!-- <div class="sidebox-bottom"><span>&nbsp;</span></div> -->
+</div></div><div class="el-5 clear-both"><div class="block-group clear"><div class="el-1" style="float: left; width:64%"><div class="sidebox-wrapper ">
+	<h3 class="sidebox-title">Информационные партнеры</h3>
+	<div class="sidebox-body">		<div class="spon center">
+		<a href="http://ertelecom.ru/" target="_blank">		<img class=" "  id="det_img_620794017" src="images/promo/0/ertelecom.jpg" width="180" height="30" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.epson.ru/" target="_blank">		<img class=" "  id="det_img_1748370107" src="images/promo/0/Epson.jpg" width="150" height="50" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.simm.ru/" target="_blank">		<img class=" "  id="det_img_281284206" src="images/promo/0/simm.jpg" width="160" height="34" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://cossa.ru/" target="_blank">		<img class=" "  id="det_img_1742217348" src="images/promo/0/cossa.jpg" width="160" height="49" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.ulmic.ru/" target="_blank">		<img class=" "  id="det_img_1875319869" src="images/promo/0/mic.jpg" width="160" height="55" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.superjob.ru" >		<img class=" "  id="det_img_1981981635" src="images/promo/0/super_job.jpg" width="159" height="68" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.dailycomm.ru/" >		<img class=" "  id="det_img_789861341" src="images/promo/0/DC.jpg" width="176" height="48" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://cloudzone.ru/" >		<img class=" "  id="det_img_535753585" src="images/promo/0/cloudzone.jpg" width="174" height="46" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://rocid.ru/" >		<img class=" "  id="det_img_1571225515" src="images/promo/0/rocid.jpg" width="131" height="68" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.cmsmagazine.ru/" >		<img class=" "  id="det_img_1843544250" src="images/promo/0/cms-mag.jpg" width="161" height="41" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.cs-cart.com/" target="_blank">		<img class=" "  id="det_img_1157349570" src="images/promo/0/cs-cart.gif" width="175" height="37" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.softline.ru/" target="_blank">		<img class=" "  id="det_img_1456600699" src="images/promo/0/softline-small.jpg" width="135" height="28" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://ul-people.ru/" target="_blank">		<img class=" "  id="det_img_169527449" src="images/promo/0/ul-people.jpg" width="160" height="36" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.uln.mts.ru/" target="_blank">		<img class=" "  id="det_img_1072300357" src="images/promo/0/logo_mts_small.jpg" width="70" height="35" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://in-numbers.ru/" >		<img class=" "  id="det_img_262139886" src="images/promo/0/int-num.jpg" width="140" height="46" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.umi-cms.ru/" target="_blank">		<img class=" "  id="det_img_728441544" src="images/promo/0/umi.jpg" width="122" height="40" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.ultop.ru/" target="_blank">		<img class=" "  id="det_img_392313722" src="images/promo/0/ultop-logo_new.jpg" width="91" height="60" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.weblancer.net/" target="_blank">		<img class=" "  id="det_img_1172301149" src="images/promo/0/weblancer.jpg" width="118" height="33" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://samag.ru/" >		<img class=" "  id="det_img_812995424" src="images/promo/0/sisad.jpg" width="169" height="79" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://kryukov.biz" target="_blank">		<img class=" "  id="det_img_11289065" src="images/promo/0/kryukov.jpg" width="122" height="40" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://mannix.ru/" target="_blank">		<img class=" "  id="det_img_811728325" src="images/promo/0/logo-mannix-s-n-2.jpg" width="170" height="29" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.advantshop.net/" target="_blank">		<img class=" "  id="det_img_2104303191" src="images/promo/0/advantshop.jpg" width="122" height="40" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.reg.ru/" >		<img class=" "  id="det_img_415536497" src="images/promo/0/regru_new.png" width="183" height="55" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://vk.com/ulgss" target="_blank">		<img class=" "  id="det_img_2041282991" src="images/promo/0/e_8621aab3.jpg" width="50" height="50" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://it-world.ru/" target="_blank">		<img class=" "  id="det_img_1671437417" src="images/promo/0/itworld-s.jpg" width="160" height="34" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+				<img class=" "  id="det_img_680881813" src="images/promo/0/retro_game_2.jpg" width="130" height="26" alt=""  border="0" />			</div>
+			<div class="spon center">
+		<a href="http://www.allintop.ru/" target="_blank">		<img class=" "  id="det_img_2117089717" src="images/promo/0/AllInTop.png" width="125" height="50" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.ul.aif.ru/" target="_blank">		<img class=" "  id="det_img_1224011067" src="images/promo/0/aif.jpg" width="180" height="30" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://uldelo.ru/" target="_blank">		<img class=" "  id="det_img_761775993" src="images/promo/0/do.jpg" width="160" height="33" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://ul.kp.ru/" target="_blank">		<img class=" "  id="det_img_1935752766" src="images/promo/0/kp.jpg" width="160" height="34" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.mosaica.ru/" target="_blank">		<img class=" "  id="det_img_265307964" src="images/promo/0/mosaika.jpg" width="160" height="30" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+			<img class=" "  id="det_img_1382570010" src="images/promo/0/zubr.jpg" width="93" height="60" alt=""  border="0" />			</div>
+			<div class="spon center">
+		<a href="http://ogni-goroda.com/" target="_blank">		<img class=" "  id="det_img_1536639226" src="images/promo/0/CL5.jpg" width="150" height="50" alt=""  border="0" />		</a>	</div>
+	</div>
+	<!-- <div class="sidebox-bottom"><span>&nbsp;</span></div> -->
+</div></div><div class="el-2" style="float: left; width:32%"><div class="sidebox-wrapper ">
+	<h3 class="sidebox-title">Партнеры</h3>
+	<div class="sidebox-body">		<div class="spon center">
+		<a href="http://www.i-association.ru/" >		<img class=" "  id="det_img_546592170" src="images/promo/0/aia.png" width="130" height="40" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.starkoff.ru/" >		<img class=" "  id="det_img_977303710" src="images/promo/0/starkoff.gif" width="39" height="40" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://mymediacompany.ru/" >		<img class=" "  id="det_img_1264475447" src="images/promo/0/my_media.gif" width="130" height="23" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.raec.ru" >		<img class=" "  id="det_img_381090157" src="images/promo/0/raek.jpg" width="140" height="51" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.internet-association.ru/" target="_blank">		<img class=" "  id="det_img_1767165052" src="images/promo/0/air_logo.jpg" width="144" height="60" alt=""  border="0" />		</a>	</div>
+	</div>
+	<!-- <div class="sidebox-bottom"><span>&nbsp;</span></div> -->
+</div></div><div class="el-3" style="float: left; width:32%"><div class="sidebox-wrapper ">
+	<h3 class="sidebox-title">HR-партнеры</h3>
+	<div class="sidebox-body">		<div class="spon center">
+		<a href="http://www.itmozg.ru/" target="_blank">		<img class=" "  id="det_img_1800229033" src="images/promo/0/itmozg.jpg" width="89" height="65" alt=""  border="0" />		</a>	</div>
+	</div>
+	<!-- <div class="sidebox-bottom"><span>&nbsp;</span></div> -->
+</div></div></div></div></div>
+			</div>
+
+	<div id="footer">
+		<div class="footer-helper-container">
+			<div class="footer-top-helper"><span class="float-left">&nbsp;</span><span class="float-right">&nbsp;</span></div>
+
+
+
+<table class="socials fixed-layout">
+<tr>
+<td class="vk">
+<div id="vk_like"></div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+VK.Widgets.Like("vk_like", {type: "mini"});
+//]]>
+</script>
+
+</td>
+
+<td class="fb">
+<div id="fb-root"></div>
+
+<script type="text/javascript">
+//<![CDATA[
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ru_RU/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+//]]>
+</script>
+
+<div class="fb-like" data-href="http://nastachku.ru" data-send="false" data-layout="button_count" data-width="120" data-show-faces="true"></div>
+</td>
+
+
+
+<td class="google">
+<!-- Поместите этот тег туда, где должна отображаться кнопка +1. -->
+<g:plusone size="medium"></g:plusone>
+
+<!-- Поместите этот вызов функции отображения в соответствующее место. -->
+
+<script type="text/javascript">
+//<![CDATA[
+  window.___gcfg = {lang: 'ru'};
+
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+//]]>
+</script>
+
+</td>
+
+<td class="twitter">
+
+<a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">tweet</a>
+<script type="text/javascript">
+//<![CDATA[
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+//]]>
+</script>
+
+</td>
+<td class="mini-icons">
+	<a href="http://vk.com/nastachku"><img alt="В контакте" src="http://2012.nastachku.ru/skins/basic/customer/images/vkontakte.png"/></a>&nbsp;
+	<a href="http://www.facebook.com/groups/244785302277703/"><img alt="Facebook" src="http://2012.nastachku.ru/skins/basic/customer/images/fb.png"/></a>&nbsp;
+	<a href="https://twitter.com/#!/nastachku"><img alt="Twitter" src="http://2012.nastachku.ru/skins/basic/customer/images/twi.png"/></a>
+</td>
+</tr>
+</table>
+
+
+
+
+<p class="bottom-copyright class">&copy; 2012-2015 &laquo;Стачка&raquo;. &nbsp;Любое использование материала приветствуется при гиперссылке.
+</p>
+
+<div class="metrics">
+
+
+
+<script type="text/javascript">
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-38587983-1', 'nastachku.ru');
+  ga('require', 'displayfeatures');
+  ga('require', 'linkid', 'linkid.js');
+  /* Openstat parser v3 minimized */
+  var campaign={_params:{},_parsed:!1,_decode64:function(a){if('function'==typeof window.atob)return atob(a);var r,t,n,i,e,s,o,p,d='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=',h=0,c=0,f='',m=[];if(!a)return a;a+='';do i=d.indexOf(a.charAt(h++)),e=d.indexOf(a.charAt(h++)),s=d.indexOf(a.charAt(h++)),o=d.indexOf(a.charAt(h++)),p=i<<18|e<<12|s<<6|o,r=p>>16&255,t=p>>8&255,n=255&p,m[c++]=64==s?String.fromCharCode(r):64==o?String.fromCharCode(r,t):String.fromCharCode(r,t,n);while(h<a.length);return f=m.join('')},_parse:function(){var a=window.location.search.substr(1),r=a.split('&');this._params={};for(var t=0;t<r.length;t++){var n=r[t].split('=');this._params[n[0]]=n[1]}this._parsed=!0},hasMarker:function(){return window.location.search.indexOf('utm_')>0?!1:(this._parsed||this._parse(),'undefined'!=typeof this._params._openstat?!0:!1)},buildCampaignParams:function(){if(!this.hasMarker())return!1;var a=this._decode64(this._params._openstat),r=a.split(';');return{campaignName:r[1],campaignSource:r[0],campaignMedium:'cpc',campaignContent:r[2]+' ('+r[3]+')'}}};
+  var hit=campaign.hasMarker()?campaign.buildCampaignParams():{};
+  hit.page=location.pathname+location.search+location.hash;
+  ga('send', 'pageview', hit);
+  /* Accurate bounce rate by time */
+  document.referrer&&0==document.referrer.split('/')[2].indexOf(location.hostname)||setTimeout(function(){ga('send','event','Сеансы','Сеансы без отказов',location.pathname)},15000);
+
+</script>
+
+<!-- Yandex.Metrika counter -->
+<div style="display:none;"><script type="text/javascript">
+(function(w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter12986590 = new Ya.Metrika({id:12986590, enableAll: true, webvisor:true});
+        }
+        catch(e) { }
+    });
+})(window, "yandex_metrika_callbacks");
+</script></div>
+<script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+<noscript><div><img src="http://mc.yandex.ru/watch/12986590" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t42.6;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet' "+
+"border='0' width='31' height='31'><\/a>")
+//--></script><!--/LiveInternet-->
+
+
+
+</div>
+
+
+
+
+			<div class="footer-bottom-helper"><span class="float-left">&nbsp;</span><span class="float-right">&nbsp;</span></div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+var proto = (document.location.protocol=='https:')?'https:':'http:';
+var host = proto+'//widget.copiny.com';
+document.write(unescape("%3Cscript src='" + host + "/static/js/widget.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" charset="utf-8">
+        var copinyWidgetOptions = {
+	position: 'left',
+        hostcommunity:'http://stachka.copiny.com',
+        newwindow: '0',
+        type: 'idea',
+	color: 	  '#ff8400',
+        border:   '#ffffff',
+	round:    '1',
+	title:	  "\u041e\u0431\u0440\u0430\u0442\u043d\u0430\u044f \u0441\u0432\u044f\u0437\u044c",
+        cache:   "9ca936d041c7637244c3fb8ef4a8ea6c\/9ca936d041c7637244c3fb8ef4a8ea6c\/ejOwVXUxULV0BZFOhqouhqoWBmC2AZhtBGa7IIm4aYMpQ7CQEUQIzDYHs50B",
+        community:4196
+};
+initCopinyWidget(copinyWidgetOptions);
+CopinyWidget.showTab();
+</script>
+
+			</div>
+
+</body>
+
+</html>

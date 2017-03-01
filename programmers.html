@@ -1,0 +1,901 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<title>Докладчики :: Программирование - Стачка! Конференция 2012 (Архив)</title>
+
+<base href="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="ru" />
+<meta name="description" content="Веб-технологии Веб-дизайн юзабилити интернет-маркетинг Программирование Мобильные облачные технологии тренды языки программирования новые подходы решении задач IT-стартапы Истории успеха брать деньги начинать Электронная коммерция Тренды России западе развитие платформ электронной коммерции Менеджмент Организация IT-компании кадры куда пойти работать службе общества Развитие Ульяновске государство польза секции будут представлены кейсы разработке организации деятельности высоконагруженных проектов известных России Mail AVITO Badoo Руководители подразделений разработки" />
+<meta name="keywords" content="Программирование, Веб-технологии, стартапы, электронная коммерция, менеджмент" />
+
+<meta property="og:title" content="Стачка! Конференция" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://nastachku.ru" />
+<meta property="og:image" content="skins/basic/customer/images/logo.gif" />
+<meta property="og:site_name" content="Стачка! Конференция" />
+<meta property="fb:admins" content="1839867817" />
+
+<meta property="vk:image" content="skins/basic/customer/images/logo.gif" />
+
+
+<link href="skins/basic/customer/images/icons/favicon.ico" rel="shortcut icon" />
+
+
+<link href="skins/basic/customer/css/ui/jqueryui.css" rel="stylesheet" type="text/css"/>
+<link href="skins/basic/customer/styles.css" rel="stylesheet" type="text/css" />
+<link href="skins/basic/customer/print.css" rel="stylesheet" media="print" type="text/css" />
+<link href="skins/basic/customer/dropdown.css" rel="stylesheet" type="text/css" />
+<!--[if lte IE 7]>
+<link href="/skins/basic/customer/styles_ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+<link href="skins/basic/customer/addons/tags/styles.css" rel="stylesheet" type="text/css" />
+<link href="skins/basic/customer/addons/news_and_emails/styles.css" rel="stylesheet" type="text/css" />
+<link href="skins/basic/customer/addons/polls/styles.css" rel="stylesheet" type="text/css" />
+<link href="skins/basic/customer/addons/hot_deals_block/styles.css" rel="stylesheet" type="text/css" />
+
+
+<link type="text/css" rel="stylesheet" href="http://www.graddit.com/css/graddit.css" />
+<link type="text/css" rel="stylesheet" href="js/jquery.ui.stars/jquery.ui.stars.min.css"/><script type="text/javascript" src="lib/js/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="lib/js/jqueryui/jquery-ui.custom.min.js"></script>
+<script type="text/javascript" src="lib/js/tools/tooltip.min.js"></script>
+<script type="text/javascript" src="lib/js/appear/jquery.appear-1.1.1.js"></script>
+
+<script type="text/javascript" src="js/editors/_empty.editor.js"></script>
+
+<script type="text/javascript" src="js/core.js"></script>
+<script type="text/javascript" src="js/ajax.js"></script>
+<script type="text/javascript" src="js/jquery.ui.stars/jquery.ui.stars.min.js"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+var index_script = 'index.php';
+var current_path = '';
+var changes_warning = 'Y';
+
+var lang = {
+	cannot_buy: 'Вы не можете купить товар с таким набором параметров',
+	no_products_selected: 'Товары не выбраны',
+	error_no_items_selected: 'Нет выбранных записей! Для выполнения этого действия должна быть выбрана хотя бы одна запись.',
+	delete_confirmation: 'Вы уверены, что хотите удалить выбранные записи?',
+	text_out_of_stock: 'Нет в наличии',
+	in_stock: 'В наличии',
+	items: 'штук(-а)',
+	text_required_group_product: 'Пожалуйста, выберите товар для указанной группы [group_name]',
+	notice: 'Оповещение',
+	warning: 'Предупреждение',
+	loading: 'Загрузка...',
+	none: 'Пусто',
+	text_are_you_sure_to_proceed: 'Вы уверены, что хотите продолжить?',
+	text_invalid_url: 'Вы ввели неправильную ссылку',
+	text_cart_changed: 'Содержимое корзины было изменено. Нажмите \"OK\" для того, чтобы сохранить изменения, или \"Cancel\", чтобы оставить содержимое неизменным.',
+	error_validator_email: 'E-Mail адрес в поле <b>[field]<\/b> неправильный.',
+	error_validator_twitter: 'Адрес twitter неправильный. Придерживайтесь формата<br/><span class=\"grey\">http://twitter.com/#!/your_profile<\/span>',
+	error_validator_vkontakte: 'Адрес vk.com неправильный. Придерживайтесь формата<br/><span class=\"grey\">http://vk.com/your_profile<\/span>',
+	error_validator_facebook: 'Адрес facebook неправильный. Придерживайтесь формата<br/><span class=\"grey\">http://www.facebook.com/your_profile http://www.facebook.com/01010101001<\/span>',
+	error_validator_confirm_email: 'E-Mail адреса в поле <b>[field]<\/b> и в поле подтверждения не совпадают.',
+	error_validator_phone: 'Неверный номер телефона в поле <b>[field]<\/b>. Правильный формат: (555) 555-55-55.',
+	error_validator_integer: 'Значение поля <b>[field]<\/b> неправильное. Значение должно быть целым числом.',
+	error_validator_multiple: 'Поле <b>[field]<\/b> не имеет выбранных параметров.',
+	error_validator_password: 'Пароли в полях <b>[field2]<\/b> и <b>[field1]<\/b> не совпадают.',
+	error_validator_required: 'Поле <b>[field]<\/b> обязательное.',
+	error_validator_zipcode: 'Неверный почтовый индекс в поле <b>[field]<\/b>. Правильный формат: [extra].',
+	error_validator_message: 'Значение поля <b>[field]<\/b> - неправильно.',
+	text_page_loading: 'Загрузка... Ваш запрос выполняется, пожалуйста, подождите.',
+	view_cart: 'Корзина',
+	checkout: 'Оформить заказ',
+	product_added_to_cart: 'Товар добавлен в корзину',
+	products_added_to_cart: 'Товары добавлены в Вашу корзину',
+	product_added_to_wl: 'Товар добавлен в Желаемое',
+	product_added_to_cl: 'Товар добавлен в Список сравнения',
+	close: 'Закрыть',
+	error: 'Ошибка',
+	error_ajax: 'Ой, произошла ошибка ([error]). Пожалуйста, попробуйте еще раз.',
+	text_changes_not_saved: 'Сделанные изменения не были сохранены.',
+	text_data_changed: 'Сделанные изменения не были сохранены.\n\nНажмите OK, чтобы продолжить, или Cancel, чтобы остаться на странице.',
+//[GTR]
+	text_vk_error: 'Неправильный формат адреса страницы vk.com.',
+	text_facebook_error: 'Неправильный формат адреса страницы Facebook',
+	text_twitter_error: 'Неправильный формат адреса страницы Twitter'
+//[/GTR]
+}
+
+var currencies = {
+	'primary': {
+		'decimals_separator': '.',
+		'thousands_separator': ',',
+		'decimals': '2',
+		'coefficient': '1.00000'
+	},
+	'secondary': {
+		'decimals_separator': '.',
+		'thousands_separator': ',',
+		'decimals': '2',
+		'coefficient': '1.00000'
+	}
+};
+
+var default_editor = '_empty';
+var default_previewer = 'fancybox';
+
+var cart_language = 'RU';
+var images_dir = '/skins/basic/customer/images';
+var skin_name = 'basic';
+var notice_displaying_time = 13;
+var cart_prices_w_taxes = false;
+var translate_mode = false;
+var regexp = new Array();
+
+
+
+$(document).ready(function(){
+	jQuery.runCart('C');
+});
+
+document.write('<style>.cm-noscript { display:none }</style>'); // hide noscript tags
+//]]>
+</script>
+
+<!--[if lt IE 8]>
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+	$('ul.dropdown li').hover(function(){
+		$(this).addClass('hover');
+		$('> .dir',this).addClass('open');
+		$('ul:first',this).css('display', 'block');
+	},function(){
+		$(this).removeClass('hover');
+		$('.open',this).removeClass('open');
+		$('ul:first',this).css('display', 'none');
+	});
+});
+//]]>
+</script>
+<![endif]-->
+
+
+<script type="text/javascript" src="addons/recurring_billing/js/func.js"></script>
+<script type="text/javascript">
+
+// Extend core function
+fn_register_hooks('recurring_billing', ['check_exceptions']);
+
+</script>
+<script type="text/javascript" src="http://userapi.com/js/api/openapi.js?48"></script>
+
+<script type="text/javascript">
+
+  VK.init({apiId: 2828604, onlyWidgets: true});
+
+</script>
+
+
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+
+$(".prog-quote p:last-child").addClass("last");
+var n = $('.prog-quote').length;
+for (var i=0; i < n; i++){
+
+if ($('.prog-quote:eq('+i+')').height() > 185){
+
+$('.prog-quote:eq('+i+')').css('height','185px');
+$('.prog-quote:eq('+i+')').addClass('collapsed');
+$('.prog-quote:eq('+i+')').after('<div class="open">Развернуть</div>');
+
+};
+
+};
+	$('.prog-quote.collapsed + .open').click(function(){
+        var height = $('.prog-quote').height();
+	$(this).prev('.prog-quote.collapsed').css('height','100%');
+        $(this).prev('.prog-quote.collapsed').removeClass('collapsed');
+        $(this).hide();
+	});
+
+var anchor = location.hash.replace('#', '');
+
+
+$('a[name='+anchor+']').siblings('.open').click();
+//$('.prog-quote').parent('div').addClass('doc');
+});
+
+//]]>
+</script>
+</head>
+
+<body class="main view pages">
+<div class="helper-container">
+	<a name="top"></a>
+
+<div id="ajax_loading_box" class="ajax-loading-box"><div class="right-inner-loading-box"><div id="ajax_loading_message" class="ajax-inner-loading-box">Загрузка...</div></div></div>
+
+
+
+
+
+<div id="container" class="container-long">
+		<div id="header">
+<div class="header-helper-container">
+	<div class="logo-image">
+		<a href="index.html"><img id="main-logo" src="http://2012.nastachku.ru/skins/basic/customer/images/logo.gif" width="137" height="70" border="0" alt="ООО &quot;Симбирские технологии&quot;" /></a>
+	</div>
+
+
+	<div class="mission">
+
+		<span class="location-city">
+			Ульяновск
+		</span>
+
+		<span class="date">
+			13-14 АПРЕЛЯ 2012
+		</span>
+
+		<span class="location-place">
+			Дом Пионеров
+		</span>
+
+	</div>
+
+
+<div id="top_menu">
+<ul class="top-menu dropdown"><li class="first-level "><a href="reporters.html">Докладчики</a></li><li class="first-level "><a href="participants.html">Я пойду</a></li><li class="first-level "><a href="sponsors.html">Спонсоры</a></li><li class="first-level "><a href="program.html">Программа</a></li><li class="first-level "><a href="contacts.html">Контакты</a></li><li class="first-level"><a href="community.html">Кто идет(1541)?</a></li></ul></div>
+
+</div>
+</div>
+	<div id="content">
+		<div class="content-helper clear">
+
+						<div class="central-column">
+				<div class="central-content">
+
+
+
+<div class="cm-notification-container"></div>
+
+					<div class="mainbox-container">
+		<h1 class="mainbox-title">Программирование</h1>
+		<div class="mainbox-body">
+<div class="wysiwyg-content clear">
+		<div class="doc-menu clear">
+	<div class="left-side">
+		<a class="theme-section c1" href="web-tech.html"> <span class="title">Веб-технологии</span> <span>Веб-дизайн, юзабилити, интернет-маркетинг, SEO</span> </a> <a class="theme-section c2 active" href="programmers.html"> <span class="title">Программирование</span> <span>Мобильные, облачные технологии, тренды,<br />
+		языки программирования, новые подходы в<br />
+		решении задач</span>&nbsp;</a><a class="theme-section c3" href="it-startup.html"><span class="title">IT-стартапы</span> <span>Истории успеха, где брать деньги, как начинать</span> </a></div>
+	<div class="right-side">
+		<a class="theme-section c4" href="e-commerce.html"> <span class="title">Электронная коммерция</span> <span>Тренды в России, на западе, развитие платформ для электронной коммерции</span> </a> <a class="theme-section c5" href="it-management.html"> <span class="title">Менеджмент в IT</span> <span>Организация IT-компании, кадры для IT, куда пойти работать</span>&nbsp;</a><a class="theme-section c6" href="it-serve-society.html"><span class="title">IT на службе общества</span> <span>Развитие IT в Ульяновске, государство и IT, польза от IT</span> </a></div>
+</div>
+<div class="descr">
+	<p>В секции будут представлены кейсы по разработке и организации деятельности высоконагруженных проектов, известных в России: Mail.Ru, AVITO.ru, Badoo и др. Руководители подразделений разработки и специалисты ведущих брендов расскажут о проблемах, которые возникали на разных этапах реализации проектов, представят тренды и новые подходы в решении задач.</p>
+<p>Докладчики: Александр Титов, Константин Тихонов, Глеб Помыкалов, Алексей Палажченко (Skype, Microsoft), Константин Осипов (Mail.Ru Group), Лев Валкин (Echo), Роман Павлушко (AVITO.ru), Михаил Табунов, Анна Степанян, Алексей Махоткин(undev.ru), Алексей Рыбак (Badoo), Алексей Веснин (Trinitech LLC).</p>
+</div>
+<div class="palazhchenko_alexey doc">
+	<a name="alexey_palazhchenko"></a>
+	<div class="signature">
+		<span class="title">Алексей Палажченко<br />
+		NoSQL под нагрузкой: практика. </span> <span class="grey">Работаю в компании Qik/Skype/Microsoft 2 года, принимаю участие в разработке backend&#39;ов для qik.com и других проектов. Получил iPad от 10gen за популяризацию использования MongoDB.</span></div>
+	<div class="prog-quote">
+		<p>
+			MongoDB, CouchDB, Riak, Redis, Cassandra&hellip; Сколько потрясающих web-scale решений! Без жёсткой структуры, быстрых, надёжных&hellip; Но так ли всё хорошо на самом деле? Я расскажу о реальном опыте использования трёх NoSQL-хранилищ под высокой нагрузкой в компании Qik: MongoDB, memcachedb, Redis. Теории будет мало, практики &ndash; много: варианты использования, хорошие и плохие особенности, производительность при разных профилях нагрузки, способы оптимизации. Доклад будет интересен фанатам и яростным противникам NoSQL, а так же здравомыслящим разработчикам, интересующихся практическим опытом.</p>
+	</div>
+	<div class="clear-both">
+		&nbsp;</div>
+</div>
+<hr />
+<div class="walkin_lev doc">
+	<a name="lev_valkin"></a>
+	<div class="signature">
+		<span class="title">Лев Валкин<br />
+		Инь и Ян масштабирования.<br />
+		Ульяновск как яйцо Силиконовой долины. Инкубация. </span><span class="grey">Основатель и CTO компании Echo</span></div>
+	<div class="prog-quote" style="height: 100%;">
+		<p class="title">
+			<strong>Инь и Ян масштабирования.</strong></p>
+		<p>
+			После того, как мы в прошлом году в 12 раз подняли стоимость услуг, использование Echo StreamServer выросло в 40 раз. Как найти 15 программистов на маргинальном языке Erlang в городе с дефицитом программистов. Что получится, если полноценные релизы можно делать несколько раз в день без отключения пользователей. Как удовлетворить клиентов, делающих 50 тысяч HTTP-запросов в секунду. Как мы управляемся с фермой из 400 серверов. Автоматизация и человеческий фактор. Масштабирование сервиса и команды. И всего час времени на доклад. НаСтачку!</p>
+		<p class="title">
+			<strong>Ульяновск как яйцо Силиконовой долины. Инкубация.</strong></p>
+		<p>
+			Наши попытки нанять людей в Сан-Франциско оканчиваются неудачей. Ульяновск оказывается спасительным кругом. Но ульяновская IT-среда поражает своими дикими контрастами с Силиконовой долиной. Летом 2010 года я сделал попытку рассказать, в чём же разница, на закрытом мероприятии в УлГУ; последовала живая дискуссия. Летом 2011 года мы с коллегами сделали серию докладов на эту тему на <a href="http://ulcamp.ru/">ULCAMP&#39;2011</a>. Что же с тех пор произошло, и что ещё можно сделать?</p>
+	</div>
+	<div class="clear-both">
+		&nbsp;</div>
+</div>
+<hr />
+<div class="pavlushko_roman doc">
+	<a name="roman_pavlushko"></a>
+	<div class="signature">
+		<span class="title">Роман Павлушко.<br />
+		Нагруженный поиск на Sphinx</span> <span class="grey"> Ведущий разработчик AVITO.ru, работаю над проектом уже более 2х лет. Более 5 лет занимаюсь разработкой крупных интернет-проектов, среди которых AVITO.ru, Рамблер, Automobile.ru, Канобу и ГдеЭтотДом. </span></div>
+<div class="prog-quote">
+		<p>
+			В докладе я расскажу, как и в каких целях AVITO.ru использует Sphinx. С какими проблемами мы столкнулись в условиях постоянно растущих нагрузок, какие решения были выбраны. Познакомим слушателей с реализованной архитектурой. Поделимся опытом ускорения индексации, сохранения целостности, организации БД, подводными камнями работы со Sphinx.</p>
+		<p>
+			Целевая аудитория:</p>
+		<p>
+			Разработчики приложений, перед которым стоит задача полнотекстового поиска с быстрой фильтрацией данных, а также те, кому интересно, как работает Sphinx на больших нагрузках.</p>
+	</div>
+	<div class="clear-both">
+		&nbsp;</div>
+</div>
+<hr />
+<div class="pomykalov_gleb doc">
+	<a name="gleb_pomykalov"></a>
+	<div class="signature">
+		<span class="title">Глеб Помыкалов<br />
+		Scrum: от теории к практике.</span><span class="grey"> Руководитель Web-команды Qik.com (Skype, Microsoft).</span></div>
+<div class="prog-quote" style="height: 100%;">
+		<p>
+			Scrum &mdash; это наиболее популярная гибкая (Agile) методология управления разработкой. Несмотря на растущий интерес, многие встречаются с серьезными сложностями при работе по Scrum. Причина кроется либо в непонимании базовых принципов, либо в простом игнорировании их.</p>
+		<p>
+			Я постараюсь рассказать как об основах Scrum, так и о своем собственном опыте.</p>
+		<ul>
+			<li>
+				<span>Истоки и ценности Scrum. Lean Manufacturing и Agile.</span></li>
+			<li>
+				<span>Основы Scrum-процесса.</span></li>
+			<li>
+				<span>Роли в Scrum-команде.</span></li>
+			<li>
+				<span>Ведение Backlog&#39;а. Насколько подробными должны быть спецификации.</span></li>
+			<li>
+				<span>От видения к продукту. Как распространяется и трансформируется видение в конечную ценность для потребителя. От CEO к разработчикам.</span></li>
+			<li>
+				<span>Где Scrum не работает.</span></li>
+		</ul>
+	</div>
+	<div class="clear-both">
+		&nbsp;</div>
+</div>
+<hr />
+<div class="titov_alexander doc">
+	<a name="alex_titov"></a>
+	<div class="signature">
+		<span class="title">Александр Титов.<br />
+		Инженерный дзен. Непрерывные изменения</span> <span class="grey"> Руководитель отдела системного администрирования в компании Skype, до этого разрабатывал &laquo;Скалакси&raquo; - первый облачный хостинг в России.<br />
+		Александр уже более 3 лет успешно применяет практики devops в России, а также является экспертом по внедрению системы управления конфигурацией Chef.<br />
+		</span></div>
+	<div class="prog-quote">
+		<p>
+			Разработать программное обеспечение в веб-индустрии - это еще не все, надо еще выкатить его в производственное окружение и при этом не разочаровать пользователей. Обычно этот процесс происходит раз в месяц, раз в две недели и сопровождается стрессом для всех его участников, а часто еще и заканчивается неприятной процедурой отката изменений, далеко не всегда безболезненной.</p>
+		<p>
+			Давайте проведем параллель с эволюцией в природе, разве там происходит так? Что-то меняется слишком резко и происходит откат? Нет, природа плавно меняет себя, делая небольшие изменения и пропуская их через жернова времени.</p>
+		<p>
+			У инженеров, работающих в сфере программного обеспечения, есть уникальный шанс делать также &mdash; внося изменения в работающий продукт каждый день. Но для этого надо выполнить несколько условий:</p>
+		<ul>
+			<li>
+				<span>нанимать только профессионалов;</span></li>
+			<li>
+				<span>наладить в команде доверительные отношения;</span></li>
+			<li>
+				<span>постоянно интегрировать продукт в тестовой среде;</span></li>
+			<li>
+				<span>использовать подходящие инструменты для управления конфигурацией и деплоя;</span></li>
+			<li>
+				<span>думать и нести ответственность всей командой.</span></li>
+		</ul>
+		<p>
+			Доклад про то, как подобрать подходящие инструменты для работы и начать регулярно выкатывать ваш продукт. Будет интересен разработчикам, менеджерам разработки и эксплуатации, техническим директорам.</p>
+		<p>
+			Чтобы доклад был более интерактивным и интересным, присылайте свои пожелания и вопросы на почту <a href="mailto:conf@devopsru.org">conf@devopsru.org</a>.</p>
+	</div>
+	<div class="clear-both">
+		&nbsp;</div>
+</div>
+<hr />
+<div class="lomakov_sergej doc">
+	<a name="sergej_lomakov"></a>
+	<div class="signature">
+		<span class="title">Сергей Ломаков.<br />
+		Использование key-value хранилища Redis в боевых условиях.</span> <span class="grey"> Системный архитектор Searchanise.com, поискового движка для интернет-магазинов </span></div>
+	<div class="prog-quote">
+		<p>
+			Еще одна in-memory база данных? Зачем она нужна, если есть memcached? Эти и многие другие вопросы я постараюсь осветить в своем докладе посвященном Redis.</p>
+		<p>
+			Содержание доклада:</p>
+		<ul>
+			<li>
+				структуры данных: строки, хэши, списки, множества и упорядоченные множества;</li>
+			<li>
+				сохранность данных и обеспечение их доступности;</li>
+			<li>
+				преимущества и недостатки этого хранилища;</li>
+			<li>
+				сравнение производительности redis и memcached;</li>
+			<li>
+				возможности применения Redis и где используем его мы.</li>
+		</ul>
+	</div>
+	<div class="clear-both">
+		&nbsp;</div>
+</div>
+<hr />
+<div class="kosmo_ilya doc">
+	<a name="ilia_kosmo"></a>
+	<div class="signature">
+		<span class="title">Илья Космодемьянский<br />
+		Теория и практики распределенных баз данных.</span><span class="grey">Специалист в области администрирования баз данных Oracle, DB2, PostgreSQL. Оказывает услуги по консультированию в ряде интернет-проектов, а также для операторов мобильной и фиксированной телефонии.</span></div>
+	<div class="prog-quote">
+		<p>
+			В данном докладе будут представлены теоретические основы и практические кейсы работы с федерациями серверов управления базами данных. Будут рассмотрены и классифицированы причины, по которым возникает необходимость перехода к распределению базы данных на несколько серверов, основные методы такого распределения, сопутствующие проблемы консистентности и алгоритмы, позволяющие решить эти проблемы. Для основных методов - различных видов репликации и обмена асинхронными сообщениями - будут рассмотрены технические средства их реализации. По итогам обзора теории мы попробуем нарисовать несколько обобщенных архитектур с применением конкретных технологических решений. Доклад адресован широкому кругу специалистов, интересующихся базами данных</p>
+	</div>
+	<div class="clear-both">
+		&nbsp;</div>
+</div>
+<hr />
+<div class="vesnin_a doc">
+	<a name="alex_vesnin"></a>
+	<div class="signature">
+		<span class="title">Алексей Веснин<br />
+		Trinitech LLC. Создание Искусственного Интеллекта в 3-х мерной среде</span> <span class="grey">Эксперт-фрилансер, 20 лет практики. Свои проекты веду с 1998 года, в основном проекты ориентированы на игры и web. Ранее преподавал в ЦКО &quot;Специалист&quot; курс собственной разработки по FreeBSD. В числе клиентов и выполненных работ КупиКупон, Mute Lab, GLLX, Specialist.ru и другие.</span></div>
+	<div class="prog-quote">
+		<p>
+			Каждый из нас, хорошо поработав, любит хорошо отдохнуть. И большинство либо начинали, либо продолжают играть &ndash; в Internet или дома. И мы поговорим об играх всерьез &ndash; как со стороны игрока, так и со стороны разработчика. Artificial Intelligence &ndash; мозг не только игровых персонажей в частности, но и всей игры в целом, как продукта. На практике рассмотрим создание бота на примере Counter Strike 1.6 и обсудим следующие моменты:</p>
+		<ul>
+			<li>
+				Основные подходы к реализации ИИ сегодня</li>
+			<li>
+				Общие ошибки</li>
+			<li>
+				- и самое главное - на практике рассмотрим правильную постановку задачи создания ИИ в трехмерном мире, шаг за шагом, с кодом и частями закрытой архитектуры.</li>
+		</ul>
+		<p>
+			Также обсудим, как каждый сможет, пользуясь этим framework&#39;ом, либо создать свою игру, либо получить достойного противника.</p>
+	</div>
+	<div class="clear-both">
+		&nbsp;</div>
+</div>
+<hr />
+<div class="tihonov_konstantin doc">
+	<a name="konst_tihonov"></a>
+	<div class="signature">
+		<span class="title">Константин Тихонов.<br />
+		Интернационализация и локализация веб-проектов на примере Qik</span> <span class="grey"> Занимается разработкой сайта Qik.com (проект Skype), ранее работал в Unitmedi(крупнейший медиахолдинг Красноярска) и Railsware. </span></div>
+	<div class="prog-quote">
+		<p>
+			Многим разработчикам веб-приложений приходится сталкиваться с необходимостью перевода своего продукта на другие языки мира. Как правило, оказывается, что эта задача намного сложнее, чем просто замена одних строк на другие, в зависимости от текущего языка. Так как многие языки имеют свои особенности (например, различный порядок слов в предложении или направление письма), а генерация текстовых сообщений встречается почти на всех уровнях приложения, то имеет смысл заранее подумать об интернационализации приложения, даже если сейчас эта задача не является актуальной. В данном докладе речь пойдет о работе проведенной, при интернационализации веб-сайта и мобильных приложений Qik (проект Skype), допущенных ошибках и сделанных выводах.</p>
+		<p>
+			План доклада:<br />
+			Основные подходы к интернационализации (i18n) и локализации (l10n).<br />
+			Поддержка i18n в Ruby on Rails.<br />
+			Объекты интернационализации - строки, даты, новости, баннеры. Проблемы с падежами и числами.<br />
+			Организация большого количества строк. Разные требования к переводу для разных разделов сайта.<br />
+			Использование внешнего сервиса для работы с переводами на различных этапах процесса разработки (программирование, тестирование, перевод, деплоймент на стэйдж и продакшн).<br />
+			Синхронизация переводов между различными версиями приложения.</p>
+	</div>
+	<div class="clear-both">
+		&nbsp;</div>
+</div>
+<hr />
+<div class="osipov_konstantin doc">
+	<a name="konst_osipov"></a>
+	<div class="signature">
+		<span class="title">Константин Осипов.<br />
+		Tarantool: как обрабатывать 1,5 млрд запросов в сутки?</span> <span class="grey">Руководитель подразделения разработчиков Mail.ru Group. Создатель Tarantool - расширяемая, транзакционная СУБД для хранения наиболее запрашиваемых и часто меняющихся данных.</span></div>
+	<div class="prog-quote">
+		<p>
+			В докладе постараюсь честно, без корпоративных пристрастий ответить на вопрос: почему Tarantool? В &laquo;вечнозелёном&raquo; мире технологий управления данными происходит очередная революция &mdash; отход от классических реляционных систем и технологий Client/Server. В новом технологическом ландшафте у Tarantool/Box есть своя ниша, и я постараюсь эту нишу точно обрисовать.</p>
+	</div>
+	<div class="clear-both">
+		&nbsp;</div>
+</div>
+<hr />
+<div class="tabunov_m doc">
+	<a name="michail_tabunov"></a>
+	<div class="signature">
+		<span class="title">Михаил Табунов<br />
+		Архитектура клиентских приложений на примере Backbone.js и Knockout.js.</span> <span class="grey">gt, undev.ru</span></div>
+	<div class="prog-quote">
+		<p>
+			В последнее время, с ростом возможностей браузера, всё сильнее видна тенденция к усложнению клиентской части WEB-приложений. Браузеры дают всё больший набор инструментов для создания полноценных приложений, сравнимых по возможностям с десктопными. В своем докладе я расскажу об эволюции архитектур клиентских приложений в браузере, о том, как заложить правильную базу для быстрорастущего приложения с насыщенным Front-End. Доклад будет сопровожден рассказом о трех самых популярных фрейморках для построения таких систем.</p>
+		<p>
+			Мой доклад состоит из нескольких частей:</p>
+		<ul>
+			<li>
+				Эволюция архитектуры клиентского кода, от сайтов к приложениям.</li>
+			<li>
+				Что такое клиентское приложение, каковы его задачи и потребности.</li>
+			<li>
+				Паттерны MVC, MVVM и MVP в браузере, и их реализация.</li>
+			<li>
+				Backbone.js, Knockout.js, Sproutcore</li>
+		</ul>
+		<p>
+			Доклад про то, как заложить правильную client-side архитектуру для безболезненного роста количества кода, команды разработчиков и бизнеса в целом.</p>
+	</div>
+	<div class="clear-both">
+		&nbsp;</div>
+</div>
+<hr />
+<div class="rybak_aleksey doc">
+	<a name="alex_ribak"></a>
+	<div class="signature">
+		<span class="title">Алексей Рыбак<br />
+		Архитектура Badoo</span><span class="grey">Badoo. Руководил разработкой проекта с нуля до 20 миллионов пользователей (2005 - 2008), сейчас руковожу разработкой и поддержкой разных внутренних компонентов, занимаюсь обеспечением стабильной и быстрой работы проекта, веду несколько специальных проектов.</span></div>
+	<div class="prog-quote">
+		<p>
+			Badoo &mdash; крупнейшая и самая быстрорастущая социальная сеть для встречи с новыми интересными людьми. Badoo объединяет более 140 миллионов пользователей в 180 странах мира; ежедневно в сети регистрируется более 130 000 новых пользователей. В докладе будут освещены основные вопросы архитектуры и технического менеджмента проекта &mdash; используемые технологии, основные кластера серверов и их масштабирование, принципы разработки и многие другие.</p>
+	</div>
+	<div class="clear-both">
+		&nbsp;</div>
+</div>
+<hr />
+<div class="mahotkin_aleksey doc">
+	<a name="alex_mahotkin"></a>
+	<div class="signature">
+		<span class="title">Алексей Махоткин<br />
+		Мульти-блиц</span><span class="grey">Стою на фейс-контроле в отделе разработки в компании Undev.ru</span></div>
+	<div class="prog-quote">
+		<p>
+			В режиме &quot;семь с половиной минут на доклад&quot; мы поговорим о целенаправленном тексте, о неполноте по Тьюрингу и о мониторинге требований, о таймлайнах и пагинации как контентных решениях, о классификации nosql-решений, а также об анализе функциональности баг-трекеров с точки зрения модальных глаголов.</p>
+	</div>
+	<div class="clear-both">
+		&nbsp;</div>
+</div>
+<hr />
+<div class="stepanjan_anna doc">
+	<a name="anna_stepanjan"></a>
+	<div class="signature">
+		<span class="title">Анна Степанян<br />
+		Из чего делались вебвыборы</span><span class="grey">Undev.ru</span></div>
+	<div class="prog-quote">
+		<p>
+			Мы расскажем о том, какие инструменты мы использовали, когда делали выборы: на каких языках программирования, с использованием каких фреймворков, делались компоненты наших программ и скриптов.</p>
+	</div>
+	<div class="clear-both">
+		&nbsp;</div>
+</div>
+<hr />
+<div class="stepanov_dmitrij doc">
+	<a name="stepanov_dmitrij"></a>
+	<div class="signature">
+		<span class="title">Дмитрий Степанов<br />
+		Shareware по-русски. Как создавать и продавать тиражное ПО и стать miniISV</span><span class="grey">CEO в 10-Strike Software</span></div>
+	<div class="prog-quote">
+		<p>Что такое shareware и тиражное ПО? Какой софт можно продавать: примеры. Что и на чем писать? Защита и кряки. Как получать оплату за программы из-за границы? Можно ли запустить софтовый бизнес в одиночку? Можно ли продавать в России? Где общаются шароварщики?</p>
+	</div>
+	<div class="clear-both">
+		&nbsp;</div>
+</div>
+<hr />
+
+	</div>
+
+</div>
+</div>
+				</div>
+			</div>
+
+
+
+
+		</div>
+	</div>
+
+
+</div>
+
+
+<div class="border-long orange clear-both"></div>
+<div class="container-long">
+						<div class="bottom clear-both">
+				<div class="block-group clear"><div class="el-1" style="float: left; width:64%"><div class="sidebox-wrapper ">
+	<h3 class="sidebox-title">Организаторы</h3>
+	<div class="sidebox-body">		<div class="spon center">
+		<a href="http://it.ulgov.ru/" >		<img class=" "  id="det_img_332543011" src="images/promo/0/ulgov.gif" width="73" height="62" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://itmcompany.ru/" >		<img class=" "  id="det_img_1870086467" src="images/promo/0/itm.jpg" width="130" height="56" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.simtech.ru/" >		<img class=" "  id="det_img_1833677589" src="images/promo/0/simtech.gif" width="129" height="58" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.kaize.ru/" >		<img class=" "  id="det_img_1688309832" src="images/promo/0/kajdzen.gif" width="130" height="58" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://m-st.ru/" >		<img class=" "  id="det_img_1870723688" src="images/promo/0/mst.gif" width="108" height="58" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.interra-group.ru/" >		<img class=" "  id="det_img_710852824" src="images/promo/0/interra.gif" width="87" height="75" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://itc73.ru/" >		<img class=" "  id="det_img_1486421865" src="images/promo/0/itc.gif" width="154" height="75" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://platidoma.ru/" >		<img class=" "  id="det_img_136926116" src="images/promo/0/platidoma.gif" width="144" height="71" alt=""  border="0" />		</a>	</div>
+	</div>
+	<!-- <div class="sidebox-bottom"><span>&nbsp;</span></div> -->
+</div></div><div class="el-2" style="float: left; width:32%"><div class="sidebox-wrapper ">
+	<h3 class="sidebox-title">Генеральный спонсор</h3>
+	<div class="sidebox-body">		<div class="spon center">
+		<a href="http://www.skype.com" >		<img class=" "  id="det_img_357492373" src="images/promo/0/skype.png" width="88" height="40" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://new.undev.ru/" target="_blank">		<img class=" "  id="det_img_908716125" src="images/promo/0/Undev.jpg" width="160" height="39" alt=""  border="0" />		</a>	</div>
+	</div>
+	<!-- <div class="sidebox-bottom"><span>&nbsp;</span></div> -->
+</div></div><div class="el-3 clear-both"><div class="sidebox-wrapper ">
+	<h3 class="sidebox-title">Спонсоры</h3>
+	<div class="sidebox-body"><div class="wysiwyg-content">
+<div class="spon-bann clear">
+	<a href="http://badoo.com/" target="_blank"><img alt="" border="0" src="images/promo/0/badoo-off.jpg" /></a> <a href="http://aboutecho.com/" target="_blank"><img alt="" border="0" src="images/promo/0/echo-off.jpg" /></a><a href="http://simbirsoft.com/" target="_blank"><img alt="" border="0" src="images/promo/0/simbirsoft-off.jpg" /></a><a href="http://www.netcat.ru/" target="_blank"><img alt="" border="0" src="images/promo/0/netcat-off.jpg" /></a><a href="http://www.mosaica.ru/" target="_blank"><img alt="" border="0" src="images/promo/0/mosaika-off.jpg" /></a><a href="http://www.itech-group.ru/" target="_blank"><img alt="" border="0" src="images/promo/0/itech-off.jpg" /></a><a href="http://www.rt.ru/" target="_blank"><img alt="" border="0" src="images/promo/0/rostelekom-off.jpg" /></a></div>
+<div class="legend clear clear-both">
+	<span class="off-sponsor">&mdash; официальный спонсор </span> <span class="gold-sponsor"> &mdash; золотой спонсор </span> <span class="plat-sponsor"> &mdash; платиновый спонсор </span></div>
+
+</div></div>
+	<!-- <div class="sidebox-bottom"><span>&nbsp;</span></div> -->
+</div></div><div class="el-4 clear-both"><div class="sidebox-wrapper ">
+	<h3 class="sidebox-title">Интернет партнеры</h3>
+	<div class="sidebox-body">		<div class="spon center">
+		<a href="http://www.evo73.ru/" target="_blank">		<img class=" "  id="det_img_810181523" src="images/promo/0/evo.jpg" width="170" height="62" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.dlink.ru/" target="_blank">		<img class=" "  id="det_img_1581198131" src="images/promo/0/dlink.jpg" width="160" height="48" alt=""  border="0" />		</a>	</div>
+	</div>
+	<!-- <div class="sidebox-bottom"><span>&nbsp;</span></div> -->
+</div></div><div class="el-5 clear-both"><div class="block-group clear"><div class="el-1" style="float: left; width:64%"><div class="sidebox-wrapper ">
+	<h3 class="sidebox-title">Информационные партнеры</h3>
+	<div class="sidebox-body">		<div class="spon center">
+		<a href="http://ertelecom.ru/" target="_blank">		<img class=" "  id="det_img_487233667" src="images/promo/0/ertelecom.jpg" width="180" height="30" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.epson.ru/" target="_blank">		<img class=" "  id="det_img_1123668313" src="images/promo/0/Epson.jpg" width="150" height="50" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.simm.ru/" target="_blank">		<img class=" "  id="det_img_2123127736" src="images/promo/0/simm.jpg" width="160" height="34" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://cossa.ru/" target="_blank">		<img class=" "  id="det_img_1907705321" src="images/promo/0/cossa.jpg" width="160" height="49" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.ulmic.ru/" target="_blank">		<img class=" "  id="det_img_506003906" src="images/promo/0/mic.jpg" width="160" height="55" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.superjob.ru" >		<img class=" "  id="det_img_290160876" src="images/promo/0/super_job.jpg" width="159" height="68" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.dailycomm.ru/" >		<img class=" "  id="det_img_1739525321" src="images/promo/0/DC.jpg" width="176" height="48" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://cloudzone.ru/" >		<img class=" "  id="det_img_824062533" src="images/promo/0/cloudzone.jpg" width="174" height="46" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://rocid.ru/" >		<img class=" "  id="det_img_1477247121" src="images/promo/0/rocid.jpg" width="131" height="68" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.cmsmagazine.ru/" >		<img class=" "  id="det_img_1458969600" src="images/promo/0/cms-mag.jpg" width="161" height="41" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.cs-cart.com/" target="_blank">		<img class=" "  id="det_img_2108323290" src="images/promo/0/cs-cart.gif" width="175" height="37" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.softline.ru/" target="_blank">		<img class=" "  id="det_img_98640383" src="images/promo/0/softline-small.jpg" width="135" height="28" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://ul-people.ru/" target="_blank">		<img class=" "  id="det_img_1319431086" src="images/promo/0/ul-people.jpg" width="160" height="36" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.uln.mts.ru/" target="_blank">		<img class=" "  id="det_img_1651057382" src="images/promo/0/logo_mts_small.jpg" width="70" height="35" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://in-numbers.ru/" >		<img class=" "  id="det_img_1383556880" src="images/promo/0/int-num.jpg" width="140" height="46" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.umi-cms.ru/" target="_blank">		<img class=" "  id="det_img_447400544" src="images/promo/0/umi.jpg" width="122" height="40" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.ultop.ru/" target="_blank">		<img class=" "  id="det_img_1885634342" src="images/promo/0/ultop-logo_new.jpg" width="91" height="60" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.weblancer.net/" target="_blank">		<img class=" "  id="det_img_686470333" src="images/promo/0/weblancer.jpg" width="118" height="33" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://samag.ru/" >		<img class=" "  id="det_img_248688327" src="images/promo/0/sisad.jpg" width="169" height="79" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://kryukov.biz" target="_blank">		<img class=" "  id="det_img_70693705" src="images/promo/0/kryukov.jpg" width="122" height="40" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://mannix.ru/" target="_blank">		<img class=" "  id="det_img_409073152" src="images/promo/0/logo-mannix-s-n-2.jpg" width="170" height="29" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.advantshop.net/" target="_blank">		<img class=" "  id="det_img_2082365917" src="images/promo/0/advantshop.jpg" width="122" height="40" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.reg.ru/" >		<img class=" "  id="det_img_1759003537" src="images/promo/0/regru_new.png" width="183" height="55" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://vk.com/ulgss" target="_blank">		<img class=" "  id="det_img_132313192" src="images/promo/0/e_8621aab3.jpg" width="50" height="50" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://it-world.ru/" target="_blank">		<img class=" "  id="det_img_645735093" src="images/promo/0/itworld-s.jpg" width="160" height="34" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+				<img class=" "  id="det_img_1097941755" src="images/promo/0/retro_game_2.jpg" width="130" height="26" alt=""  border="0" />			</div>
+			<div class="spon center">
+		<a href="http://www.allintop.ru/" target="_blank">		<img class=" "  id="det_img_269239308" src="images/promo/0/AllInTop.png" width="125" height="50" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.ul.aif.ru/" target="_blank">		<img class=" "  id="det_img_1003227467" src="images/promo/0/aif.jpg" width="180" height="30" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://uldelo.ru/" target="_blank">		<img class=" "  id="det_img_2006657880" src="images/promo/0/do.jpg" width="160" height="33" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://ul.kp.ru/" target="_blank">		<img class=" "  id="det_img_1079420831" src="images/promo/0/kp.jpg" width="160" height="34" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.mosaica.ru/" target="_blank">		<img class=" "  id="det_img_436941950" src="images/promo/0/mosaika.jpg" width="160" height="30" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+				<img class=" "  id="det_img_346407899" src="images/promo/0/zubr.jpg" width="93" height="60" alt=""  border="0" />			</div>
+			<div class="spon center">
+		<a href="http://ogni-goroda.com/" target="_blank">		<img class=" "  id="det_img_55605496" src="images/promo/0/CL5.jpg" width="150" height="50" alt=""  border="0" />		</a>	</div>
+	</div>
+	<!-- <div class="sidebox-bottom"><span>&nbsp;</span></div> -->
+</div></div><div class="el-2" style="float: left; width:32%"><div class="sidebox-wrapper ">
+	<h3 class="sidebox-title">Партнеры</h3>
+	<div class="sidebox-body">		<div class="spon center">
+		<a href="http://www.i-association.ru/" >		<img class=" "  id="det_img_412586039" src="images/promo/0/aia.png" width="130" height="40" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.starkoff.ru/" >		<img class=" "  id="det_img_106629573" src="images/promo/0/starkoff.gif" width="39" height="40" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://mymediacompany.ru/" >		<img class=" "  id="det_img_561609402" src="images/promo/0/my_media.gif" width="130" height="23" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.raec.ru" >		<img class=" "  id="det_img_702746915" src="images/promo/0/raek.jpg" width="140" height="51" alt=""  border="0" />		</a>	</div>
+			<div class="spon center">
+		<a href="http://www.internet-association.ru/" target="_blank">		<img class=" "  id="det_img_1846154894" src="images/promo/0/air_logo.jpg" width="144" height="60" alt=""  border="0" />		</a>	</div>
+	</div>
+	<!-- <div class="sidebox-bottom"><span>&nbsp;</span></div> -->
+</div></div><div class="el-3" style="float: left; width:32%"><div class="sidebox-wrapper ">
+	<h3 class="sidebox-title">HR-партнеры</h3>
+	<div class="sidebox-body">		<div class="spon center">
+		<a href="http://www.itmozg.ru/" target="_blank">		<img class=" "  id="det_img_1385671935" src="images/promo/0/itmozg.jpg" width="89" height="65" alt=""  border="0" />		</a>	</div>
+	</div>
+	<!-- <div class="sidebox-bottom"><span>&nbsp;</span></div> -->
+</div></div></div></div></div>
+			</div>
+
+	<div id="footer">
+		<div class="footer-helper-container">
+			<div class="footer-top-helper"><span class="float-left">&nbsp;</span><span class="float-right">&nbsp;</span></div>
+
+
+
+<table class="socials fixed-layout">
+<tr>
+<td class="vk">
+<div id="vk_like"></div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+VK.Widgets.Like("vk_like", {type: "mini"});
+//]]>
+</script>
+
+</td>
+
+<td class="fb">
+<div id="fb-root"></div>
+
+<script type="text/javascript">
+//<![CDATA[
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ru_RU/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+//]]>
+</script>
+
+<div class="fb-like" data-href="http://nastachku.ru" data-send="false" data-layout="button_count" data-width="120" data-show-faces="true"></div>
+</td>
+
+
+
+<td class="google">
+<!-- Поместите этот тег туда, где должна отображаться кнопка +1. -->
+<g:plusone size="medium"></g:plusone>
+
+<!-- Поместите этот вызов функции отображения в соответствующее место. -->
+
+<script type="text/javascript">
+//<![CDATA[
+  window.___gcfg = {lang: 'ru'};
+
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+//]]>
+</script>
+
+</td>
+
+<td class="twitter">
+
+<a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">tweet</a>
+<script type="text/javascript">
+//<![CDATA[
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+//]]>
+</script>
+
+</td>
+<td class="mini-icons">
+	<a href="http://vk.com/nastachku"><img alt="В контакте" src="http://2012.nastachku.ru/skins/basic/customer/images/vkontakte.png"/></a>&nbsp;
+	<a href="http://www.facebook.com/groups/244785302277703/"><img alt="Facebook" src="http://2012.nastachku.ru/skins/basic/customer/images/fb.png"/></a>&nbsp;
+	<a href="https://twitter.com/#!/nastachku"><img alt="Twitter" src="http://2012.nastachku.ru/skins/basic/customer/images/twi.png"/></a>
+</td>
+</tr>
+</table>
+
+
+
+
+<p class="bottom-copyright class">&copy; 2012-2015 &laquo;Стачка&raquo;. &nbsp;Любое использование материала приветствуется при гиперссылке.
+</p>
+
+<div class="metrics">
+
+
+
+<script type="text/javascript">
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-38587983-1', 'nastachku.ru');
+  ga('require', 'displayfeatures');
+  ga('require', 'linkid', 'linkid.js');
+  /* Openstat parser v3 minimized */
+  var campaign={_params:{},_parsed:!1,_decode64:function(a){if('function'==typeof window.atob)return atob(a);var r,t,n,i,e,s,o,p,d='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=',h=0,c=0,f='',m=[];if(!a)return a;a+='';do i=d.indexOf(a.charAt(h++)),e=d.indexOf(a.charAt(h++)),s=d.indexOf(a.charAt(h++)),o=d.indexOf(a.charAt(h++)),p=i<<18|e<<12|s<<6|o,r=p>>16&255,t=p>>8&255,n=255&p,m[c++]=64==s?String.fromCharCode(r):64==o?String.fromCharCode(r,t):String.fromCharCode(r,t,n);while(h<a.length);return f=m.join('')},_parse:function(){var a=window.location.search.substr(1),r=a.split('&');this._params={};for(var t=0;t<r.length;t++){var n=r[t].split('=');this._params[n[0]]=n[1]}this._parsed=!0},hasMarker:function(){return window.location.search.indexOf('utm_')>0?!1:(this._parsed||this._parse(),'undefined'!=typeof this._params._openstat?!0:!1)},buildCampaignParams:function(){if(!this.hasMarker())return!1;var a=this._decode64(this._params._openstat),r=a.split(';');return{campaignName:r[1],campaignSource:r[0],campaignMedium:'cpc',campaignContent:r[2]+' ('+r[3]+')'}}};
+  var hit=campaign.hasMarker()?campaign.buildCampaignParams():{};
+  hit.page=location.pathname+location.search+location.hash;
+  ga('send', 'pageview', hit);
+  /* Accurate bounce rate by time */
+  document.referrer&&0==document.referrer.split('/')[2].indexOf(location.hostname)||setTimeout(function(){ga('send','event','Сеансы','Сеансы без отказов',location.pathname)},15000);
+
+</script>
+
+<!-- Yandex.Metrika counter -->
+<div style="display:none;"><script type="text/javascript">
+(function(w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter12986590 = new Ya.Metrika({id:12986590, enableAll: true, webvisor:true});
+        }
+        catch(e) { }
+    });
+})(window, "yandex_metrika_callbacks");
+</script></div>
+<script src="http://mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+<noscript><div><img src="http://mc.yandex.ru/watch/12986590" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t42.6;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet' "+
+"border='0' width='31' height='31'><\/a>")
+//--></script><!--/LiveInternet-->
+
+
+
+</div>
+
+
+
+
+			<div class="footer-bottom-helper"><span class="float-left">&nbsp;</span><span class="float-right">&nbsp;</span></div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+var proto = (document.location.protocol=='https:')?'https:':'http:';
+var host = proto+'//widget.copiny.com';
+document.write(unescape("%3Cscript src='" + host + "/static/js/widget.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript" charset="utf-8">
+        var copinyWidgetOptions = {
+	position: 'left',
+        hostcommunity:'http://stachka.copiny.com',
+        newwindow: '0',
+        type: 'idea',
+	color: 	  '#ff8400',
+        border:   '#ffffff',
+	round:    '1',
+	title:	  "\u041e\u0431\u0440\u0430\u0442\u043d\u0430\u044f \u0441\u0432\u044f\u0437\u044c",
+        cache:   "9ca936d041c7637244c3fb8ef4a8ea6c\/9ca936d041c7637244c3fb8ef4a8ea6c\/ejOwVXUxULV0BZFOhqouhqoWBmC2AZhtBGa7IIm4aYMpQ7CQEUQIzDYHs50B",
+        community:4196
+};
+initCopinyWidget(copinyWidgetOptions);
+CopinyWidget.showTab();
+</script>
+
+			</div>
+
+</body>
+
+</html>
