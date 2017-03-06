@@ -13,7 +13,7 @@ ul.dropdown, ul.dropdown li, ul.dropdown ul {
 }
 ul.dropdown {
 	position: relative;
-	z-index: 1;
+	/*z-index: 1;*/
 }
 ul.dropdown li {
 	line-height: 1.3em;

@@ -164,7 +164,7 @@ a.dashed:hover{border-bottom:1px dashed transparent;}
 .left-column{float:left;width:171px;margin-left:-968px;}
 .right-column{float:left;width:171px;margin-left:-171px;}
 .logo-image{float:left;margin-top:10px;position:relative;z-index:8;}
-#top_menu{clear:both;position:relative;z-index:7;}
+#top_menu{clear:both;/*position:relative;z-index:7;*/}
 #top_menu, .top-menu, #top_menu ul li.first-level, #top_menu ul li.first-level.cm-active{vertical-align:bottom;}
 .top_menu li.first-level, .top_menu li.first-level a{padding:0;margin:0;}
 #top_menu li.first-level a, #top_menu li.first-level a:hover, #top_menu li.first-level.cm-active a, #top_menu li.first-level.cm-active a:hover{color:#535353;font:bold 108% Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;text-decoration:none;}
